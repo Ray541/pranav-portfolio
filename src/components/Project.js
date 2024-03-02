@@ -21,7 +21,7 @@ const Project = () => {
     },
     {
       projectNum: "02",
-      projectNumber: "Project 4",
+      projectNumber: "Project 2",
       projectName: "Instagram Clone",
       projectType: "Modern Website",
       projectDesc:
@@ -33,7 +33,7 @@ const Project = () => {
     },
     {
       projectNum: "03",
-      projectNumber: "Project 2",
+      projectNumber: "Project 3",
       projectName: "What's App Messaging POC",
       projectType: "Modern Website",
       projectDesc:
@@ -45,7 +45,7 @@ const Project = () => {
     },
     {
       projectNum: "04",
-      projectNumber: "Project 3",
+      projectNumber: "Project 4",
       projectName: "Weather App",
       projectType: "Website",
       projectDesc:
