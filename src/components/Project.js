@@ -21,6 +21,18 @@ const Project = () => {
     },
     {
       projectNum: "02",
+      projectNumber: "Project 4",
+      projectName: "Instagram Clone",
+      projectType: "Modern Website",
+      projectDesc:
+        "This is a Instagram Clone Website which will showcase all the major features of Instagram. Tech Stack being used to bulid this website are : Vite React, JavaScript, Chakra UI and Firebase. It is a Fullstack Project.",
+      projectEnv: "VS Code",
+      projectTechnologies: "Vite React, JavaScript, Chakra UI & Firebase",
+      projectLink: "https://social-app-clone-jade-kappa.vercel.app/",
+      projectGitLink: "https://github.com/Ray541/instagram-clone",
+    },
+    {
+      projectNum: "03",
       projectNumber: "Project 2",
       projectName: "What's App Messaging POC",
       projectType: "Modern Website",
@@ -32,7 +44,7 @@ const Project = () => {
       projectGitLink: "https://github.com/Ray541/poc",
     },
     {
-      projectNum: "03",
+      projectNum: "04",
       projectNumber: "Project 3",
       projectName: "Weather App",
       projectType: "Website",
@@ -42,18 +54,6 @@ const Project = () => {
       projectTechnologies: "HTML, CSS, JavaScript, Bootstrap 5",
       projectLink: "https://weather-app-seven-zeta-88.vercel.app/",
       projectGitLink: "https://github.com/Ray541/weather-app",
-    },
-    {
-      projectNum: "04",
-      projectNumber: "Project 4",
-      projectName: "Instagram Clone",
-      projectType: "Modern Website",
-      projectDesc:
-        "This is a Instagram Clone Website which will showcase all the major features of Instagram. Tech Stack being used to bulid this website are : Vite React, JavaScript, Chakra UI and Firebase. It is a Fullstack Project.",
-      projectEnv: "VS Code",
-      projectTechnologies: "Vite React, JavaScript, Chakra UI & Firebase",
-      projectLink: "",
-      projectGitLink: "",
     },
   ];
   return (
