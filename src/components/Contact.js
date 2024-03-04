@@ -45,7 +45,9 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <div className="row contact-section">
-          <h2 className="reveal scroll-active">Don't be shy, send a message</h2>
+          <h1 className="reveal scroll-active">
+            Contact me by sending a Mail.
+          </h1>
           <div className="col-lg-7 col-md-10 mt-5 reveal scroll-active">
             <form
               className="contact-form"
@@ -75,12 +77,14 @@ const Contact = () => {
                 placeholder="Message..."
                 className="message"
               ></textarea>
-              <input
+              <button
                 type="submit"
                 name="send"
                 value="Send"
                 className="send-btn"
-              />
+              >
+                Send <i className="bi bi-send"></i>
+              </button>
             </form>
           </div>
         </div>

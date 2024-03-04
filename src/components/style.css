@@ -792,10 +792,14 @@ span {
 }
 
 .send-btn {
-  width: 310px !important;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+  padding: 7px 70px;
   font-weight: 700;
-  outline: 0;
+  outline: unset;
   color: var(--black-color);
   border: 2px solid var(--black-color) !important;
   background-color: transparent;
