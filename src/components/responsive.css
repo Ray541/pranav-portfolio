@@ -16,6 +16,15 @@
     gap: 30px;
   }
 
+  .home-title span {
+    font-size: 55px;
+    transition: all 0.2s ease;
+  }
+
+  .home-sub-title span {
+    font-size: 50px;
+  }
+
   .hero-img {
     display: flex;
     align-items: center;
@@ -29,6 +38,26 @@
     height: 350px;
     position: relative;
   }
+
+  .about-img {
+    width: 90%;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+
+  .about-img img:hover {
+    border-radius: unset;
+  }
+
+  .about-first-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
   .whole-about {
     display: flex;
     align-items: center;
@@ -54,7 +83,6 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 30px;
   }
 
   #internship {
@@ -109,7 +137,7 @@
   }
 }
 
-@media (width > 425px) and (width < 768px) {
+@media (width > 425px) and (width <= 768px) {
   .home-content {
     display: flex;
     align-items: center;
@@ -117,11 +145,18 @@
     gap: 30px;
   }
 
+  .home-title span {
+    font-size: 55px;
+    transition: all 0.2s ease;
+  }
+
+  .home-sub-title span {
+    font-size: 55px;
+    transition: all 0.2s ease;
+  }
+
   .hero-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    width: 70%;
   }
 
   .hero-img img {
@@ -134,13 +169,25 @@
     padding: 30px;
   }
 
+  .about-img {
+    width: 60%;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+
+  .about-img img:hover {
+    border-radius: unset;
+  }
+
   .accordion {
     width: 425px;
     border-radius: unset;
   }
 
   .education h3 {
-    margin: 0px 0px 30px 0px;
+    margin: 30px 0px 30px 0px;
   }
 
   #internship {

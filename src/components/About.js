@@ -40,15 +40,18 @@ const About = () => {
     "React",
     "JavaScript",
     "TypeScript",
-    "Tailwind CSS",
-    "Bootstrap CSS",
-    "HTML",
+    "Tailwind",
+    "Bootstrap",
+    "HTML5",
     "CSS",
     "Jquery",
     "C",
     "C++",
     "Java",
     "SQL",
+    "Firebase",
+    "Supabase",
+    "Git",
   ];
   return (
     <section id="about">
@@ -56,38 +59,43 @@ const About = () => {
         <div className="section-title text-center col-md-12 mb-3">
           <h1>About Me</h1>
         </div>
-        <div className="row">
+        <div className="row about-first-row">
           <div className="about-img col-lg-6">
             <img src={aboutimg} className="img-fluid" alt="" />
           </div>
           <div className="about-text col-lg-6">
             <p>
-              I'm Pranav Rao, a Computer Science Engineer with a passion for{" "}
-              <span>Frontend Web Development</span>.
+              I'm Pranav Rao, a Computer Science Engineer <b>💻</b> with a
+              passion for <span>Frontend Web Development</span>.
             </p>
             <p>
-              As you explore my portfolio, you will find examples of my work,
-              including some of the <span>Projects</span> and the{" "}
-              <span>Internships</span>.
-            </p>
-            <p>
-              With a strong foundation in{" "}
+              I am an <span>Anime Adict</span> <b>🎌</b>. I like to{" "}
+              <span>Travel</span> and Listen<span> Musics and Songs 🎧.</span>{" "}
+              <span>Football</span> Enthusiastic <b>⚽</b>. A{" "}
               <span>
-                React, TypeScript, JavaScipt, Tailwind CSS, Bootstrap, HTML,
-                CSS, SQL, C, C++.
+                Evening Person <b>🌆</b>
+              </span>
+              . <span>Bike</span> Enthusiastic <strong>1N23456</strong>{" "}
+              <b>🏍️</b>. An{" "}
+              <span>
+                Introvert <b>😊</b>.
               </span>{" "}
-              I have had the opportunity to work on various projects and
-              collaborate with talented individuals from different industries
-              through my Internship.
+              Like to <span>Capture</span> the <span>Time</span> through{" "}
+              <span>
+                Photos <b>📸</b>
+              </span>
+              .
             </p>
             <p>
-              I am excited to connect with like-minded individuals,
-              organizations, and potential collaborators who share my passion
-              for Web Development. If you are interested in working together or
-              have any questions, please don't hesitate to reach out.
+              As you explore my portfolio, you will find examples of my Work,
+              including some of the <span>Projects</span>
+              <b>📝</b> and the
+              <span> Internships</span> <b>🖥️</b>.
             </p>
-            <p>
-              <span>Looking forward for connecting with you!</span>
+            <p style={{ marginBottom: 0 }}>
+              <span>
+                <b>👍</b> Looking forward for connecting with you! <b>✌️</b>
+              </span>
             </p>
           </div>
         </div>
@@ -147,8 +155,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="row text-center mt-5 reveal">
-          <h3>Skills</h3>
+        <div className="row text-center reveal">
+          <h3 className="skills-title">Skills</h3>
           <div className="skill-tab">
             {skills.map((skill, index) => (
               <span className="skill" key={index}>

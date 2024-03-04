@@ -240,6 +240,7 @@ span {
 }
 
 .home-title span {
+  font-size: 70px;
   transition: all 0.2s ease;
 }
 
@@ -250,7 +251,7 @@ span {
 
 .home-sub-title span {
   color: var(--black-color);
-  font-size: 50px;
+  font-size: 70px;
 }
 
 .major-one-liner {
@@ -261,7 +262,6 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
   overflow: hidden;
 }
 
@@ -278,19 +278,17 @@ span {
   text-align: center;
   font-weight: 700;
   outline: 0;
-  color: var(--black-color);
+  color: var(--white-color);
   border: 2px solid var(--black-color);
-  background-color: transparent;
-  box-shadow: 4px 4px 0.5px 1px var(--black-color);
+  background-color: var(--grey-color);
   transition: all 0.3s ease;
 }
 
 .download-button:hover,
 .download-button:focus {
-  transform: translateX(4px) translateY(4px);
   box-shadow: unset;
   background-color: var(--black-color);
-  color: var(--white-color);
+  transform: translateY(5px);
 }
 
 .home-socials {
@@ -320,7 +318,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(235, 235, 235, 0.479);
+  background-color: #e6e6e688;
   padding: 60px 0px;
 }
 
@@ -330,23 +328,44 @@ span {
   justify-content: center;
   flex-direction: column;
 }
-
-.about-img {
-  height: 100%;
+.about-first-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+}
+
+.about-img {
+  width: 35%;
 }
 
 .about-img img {
-  width: 70%;
+  width: 100%;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.326));
+  transition: all 0.5s ease-in-out;
+}
+
+.about-img img:hover {
+  filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.526));
 }
 
 .about-text {
+  height: max-content;
+  padding: 20px 5px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  background-color: #d7d7d78b;
+  border: 2px solid var(--grey-color);
+}
+
+.about-text p {
+  text-align: center;
+}
+
+.about-text b {
+  font-size: 30px;
 }
 
 .education h3 {
@@ -425,6 +444,10 @@ span {
   transform: translateY(4px) translateX(4px);
   box-shadow: none;
 }
+
+.skills-title {
+  margin-top: 20px;
+}
 /* About Container */
 
 /* Internship Section */
@@ -432,6 +455,7 @@ span {
 #internship-banner {
   width: 100%;
   padding-top: 50px;
+  background-color: rgba(236, 236, 236, 0.792);
 }
 
 #internship {
@@ -552,7 +576,6 @@ span {
 
 #project-banner {
   width: 100%;
-  background-color: rgba(235, 235, 235, 0.479);
   padding-top: 50px;
 }
 
@@ -701,6 +724,7 @@ span {
 .project-view-btn:hover {
   box-shadow: unset;
   background-color: var(--black-color);
+  transform: translateX(10px);
   color: var(--white-color);
 }
 
@@ -719,6 +743,7 @@ span {
 .git-project-view-btn:hover {
   box-shadow: unset;
   background-color: var(--black-color);
+  transform: translateX(-10px);
   color: var(--white-color);
 }
 
@@ -726,7 +751,7 @@ span {
 
 /* Contact Section */
 #contact {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(245, 245, 245);
 }
 
 .contact-section {
