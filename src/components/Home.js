@@ -22,10 +22,13 @@ const Home = () => {
             <p className="major-one-liner">
               Computer Science Engineer <b>[B. Tech]</b>
             </p>
-            <p className="major-one-liner">I Design and Develop Dynamic Websites.</p>
+            <p className="major-one-liner">
+              I Design and Develop Dynamic Websites.
+            </p>
             <a href={resume} download="Pranav's_Resume" rel="noreferrer">
               <button className="download-button mb-4">
-                Download CV <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                Download CV{" "}
+                <i className="bi bi-file-earmark-arrow-down-fill"></i>
               </button>
             </a>
             <div className="home-socials">
