@@ -69,7 +69,7 @@ const About = () => {
               passion for <span>Frontend Web Development</span>.
             </p>
             <p>
-              I am an <span>Anime Adict</span> <b>🎌</b>. I like to{" "}
+              I am an <span>Anime Addict</span> <b>🎌</b>. I like to{" "}
               <span>Travel</span> and Listen<span> Musics and Songs 🎧.</span>{" "}
               <span>Football</span> Enthusiastic <b>⚽</b>. A{" "}
               <span>
