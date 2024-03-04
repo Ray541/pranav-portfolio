@@ -29,11 +29,12 @@ html {
 }
 
 ::-webkit-scrollbar {
-  background-color: var(--black-color);
-  width: 5px;
+  background-color: var(--grey-color);
+  width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
+  border: 1px solid var(--black-color);
   background-color: var(--primary-color);
 }
 
@@ -234,13 +235,26 @@ span {
   flex-direction: column;
 }
 
-.hero-text h2 span {
+.home-title {
+  color: var(--primary-color);
+}
+
+.home-title span {
   transition: all 0.2s ease;
 }
 
-.hero-text h2 span:hover {
+.home-title span:hover {
   color: var(--grey-color);
-  cursor: pointer;
+  cursor: none;
+}
+
+.home-sub-title span {
+  color: var(--black-color);
+  font-size: 50px;
+}
+
+.major-one-liner {
+  font-size: 17px;
 }
 
 .hero-img {
@@ -248,10 +262,15 @@ span {
   align-items: center;
   justify-content: center;
   width: 40%;
+  overflow: hidden;
 }
 
 .hero-img img {
-  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-img img:hover {
+  border-radius: 50%;
 }
 
 .download-button {
@@ -260,7 +279,7 @@ span {
   font-weight: 700;
   outline: 0;
   color: var(--black-color);
-  border: 1px solid var(--black-color);
+  border: 2px solid var(--black-color);
   background-color: transparent;
   box-shadow: 4px 4px 0.5px 1px var(--black-color);
   transition: all 0.3s ease;
@@ -284,14 +303,13 @@ span {
 .home-socials a i {
   cursor: pointer;
   font-size: 17px;
-  color: var(--grey-color);
+  color: var(--black-color);
   transition: all 0.2s ease;
 }
 
 .home-socials a i:hover,
 .home-socials a i:focus {
-  transform: translateY(-5px) !important;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Home Section */
@@ -350,11 +368,12 @@ span {
   color: var(--primary-color);
   outline: unset;
   box-shadow: 0 0 0 transparent;
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 0px;
 }
 
 .accordion-button:focus {
+  border: 2px solid var(--primary-color);
   box-shadow: 0 0 0 transparent;
 }
 
@@ -371,6 +390,15 @@ span {
 .accordion-item:last-of-type .accordion-button.collapsed {
   border-radius: 0px;
   outline: 0;
+}
+
+.accordion-body ul li {
+  font-size: 16px;
+}
+
+.accordion-body ul li span {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .skill-tab {
@@ -664,15 +692,13 @@ span {
   font-weight: 700;
   outline: 0;
   color: var(--black-color);
-  border: 1px solid var(--black-color);
+  border: 2px solid var(--black-color);
   background-color: transparent;
-  /* box-shadow: 4px 4px 0.5px 1px var(--black-color); */
   transition: all 0.3s ease;
 }
 
 .project-view-btn:focus,
 .project-view-btn:hover {
-  /* transform: translateX(4px) translateY(4px); */
   box-shadow: unset;
   background-color: var(--black-color);
   color: var(--white-color);
@@ -684,15 +710,13 @@ span {
   font-weight: 700;
   outline: 0;
   color: var(--black-color);
-  border: 1px solid var(--black-color);
+  border: 2px solid var(--black-color);
   background-color: transparent;
-  /* box-shadow: -4px 4px 0.5px 1px var(--black-color); */
   transition: all 0.3s ease;
 }
 
 .git-project-view-btn:focus,
 .git-project-view-btn:hover {
-  /* transform: translateX(-4px) translateY(4px); */
   box-shadow: unset;
   background-color: var(--black-color);
   color: var(--white-color);
@@ -725,7 +749,7 @@ span {
 
 .contact-form input,
 .contact-form textarea {
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   padding: 5px;
   background-color: transparent;
   outline: unset;
@@ -739,7 +763,7 @@ span {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 1px solid var(--black-color);
+  border: 2px solid var(--black-color);
 }
 
 .send-btn {
@@ -748,13 +772,9 @@ span {
   font-weight: 700;
   outline: 0;
   color: var(--black-color);
-  border: 1px solid var(--black-color) !important;
+  border: 2px solid var(--black-color) !important;
   background-color: transparent;
   transition: all 0.3s ease;
-}
-
-.send-btn:hover {
-  color: var(--secondary-color);
 }
 
 .send-btn:focus,
