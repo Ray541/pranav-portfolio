@@ -366,6 +366,11 @@ span {
 
 .about-text b {
   font-size: 30px;
+  text-shadow: 0 0 7px black;
+}
+
+.about-text b:hover {
+  cursor: pointer;
 }
 
 .education h3 {

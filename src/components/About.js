@@ -70,7 +70,11 @@ const About = () => {
             </p>
             <p>
               I am an <span>Anime Addict</span> <b>🎌</b>. I like to{" "}
-              <span>Travel</span> and Listen<span> Musics and Songs 🎧.</span>{" "}
+              <span>Travel</span> and Listen
+              <span>
+                {" "}
+                Musics and Songs <b>🎧</b>.
+              </span>{" "}
               <span>Football</span> Enthusiastic <b>⚽</b>. A{" "}
               <span>
                 Evening Person <b>🌆</b>
