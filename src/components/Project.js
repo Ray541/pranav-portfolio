@@ -10,14 +10,14 @@ const Project = () => {
     {
       projectNum: "01",
       projectNumber: "Project 1",
-      projectName: "Polling Application",
+      projectName: "Pollify",
       projectType: "Modern Website",
       projectDesc:
-        "Used Supabase Email System for Account activation . Developed a robust and user-friendly poll application, facilitating seamless creation, distribution, and analysis ofsurveys to gather valuable insights.",
+        "User can Create, Vote, View Result and Delete Polls. Used Firebase Email System for Account activation. Tech Stack being used to bulid this website are : Vite React, JavaScript, Tailwind CSS and Firebase. Fullstack Project.",
       projectEnv: "VS Code",
-      projectTechnologies: "React, TypeScript, Tailwind CSS & Supabase",
+      projectTechnologies: "React, TypeScript, Tailwind CSS & Firebase",
       projectLink: "https://polling-application-alpha.vercel.app/",
-      projectGitLink: "https://github.com/Ray541/polling-application",
+      projectGitLink: "https://github.com/Ray541/pollify",
     },
     {
       projectNum: "02",
@@ -25,7 +25,7 @@ const Project = () => {
       projectName: "Instagram Clone",
       projectType: "Modern Website",
       projectDesc:
-        "This is a Instagram Clone Website which will showcase all the major features of Instagram. Tech Stack being used to bulid this website are : Vite React, JavaScript, Chakra UI and Firebase. It is a Fullstack Project.",
+        "This is a Instagram Clone Website which will showcase all the major features of Instagram. Tech Stack being used to bulid this website are : Vite React, JavaScript, Chakra UI and Firebase. Fullstack Project.",
       projectEnv: "VS Code",
       projectTechnologies: "Vite React, JavaScript, Chakra UI & Firebase",
       projectLink: "https://social-app-clone-jade-kappa.vercel.app/",
