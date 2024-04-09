@@ -16,7 +16,7 @@ const Project = () => {
         "User can Create, Vote, View Result and Delete Polls. Used Firebase Email System for Account activation. Tech Stack being used to bulid this website are : Vite React, JavaScript, Tailwind CSS and Firebase. Fullstack Project.",
       projectEnv: "VS Code",
       projectTechnologies: "React, TypeScript, Tailwind CSS & Firebase",
-      projectLink: "https://polling-application-alpha.vercel.app/",
+      projectLink: "https://pollify-sable.vercel.app/",
       projectGitLink: "https://github.com/Ray541/pollify",
     },
     {
