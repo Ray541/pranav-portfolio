@@ -8,65 +8,81 @@ import "../components/responsive.css";
 const Internship = () => {
   const internships = [
     {
+      workType: "Job",
+      companyName: "Geopage Consultants",
+      companyLocation: "Bengaluru",
+      companyRole: "Junior Frontend Web Developer",
+      companyDuration: "05/2024 - Present",
+      companyFocus: "Modern Web Development",
+      companyTasks: [
+        "Frontend Web Development",
+        "Frontend-Tech.: React, TypeScript, JavaScript, Tailwind CSS",
+        "Backend-Tech.: Firebase, Supabase | Version Control: Git",
+        "Company focuses on Web Development and Civil Engineering",
+      ],
+      companyNum: "01",
+    },
+    {
+      workType: "Internship",
       companyName: "AntStack | Fullstack Serverless Consulting Company",
       companyLocation: "Bengaluru",
-      companyRole: "Full Stack Web Development Intern",
-      companyDuration: "11/2023 to 01/2024",
+      companyRole: "Frontend Web Development Intern",
+      companyDuration: "11/2023 - 01/2024",
       companyFocus: "Modern Web Development",
       companyTasks: [
         "Frontend Web Development",
         "Frontend-Tech.: React, TypeScript, JavaScript, Tailwind CSS",
         "Backend-Tech.: Firebase, Supabase | Version Control: Git",
         "Participated in POC and completed a Major Project",
-        "Worked in VS Code Environment & Firebase, Supabase",
       ],
-      companyNum: "01",
+      companyNum: "02",
     },
     {
+      workType: "Internship",
       companyName: "techEnvision",
       companyLocation: "Kolhapur",
       companyRole: "Full Stack Web Development Intern",
-      companyDuration: "03/2023 to 07/2023",
+      companyDuration: "03/2023 - 07/2023",
       companyFocus: "Web Development",
       companyTasks: [
         "Frontend-Tech.: HTML, CSS, Bootstrap-5, Wordpress",
         "Backend-Tech.: PHP, SQL",
         "Advanced JavaScript, jQuey",
         "Worked in Three Projects",
-        "Worked in VS Code Environment & Wordpress",
       ],
-      companyNum: "02",
+      companyNum: "03",
     },
     {
+      workType: "Internship",
       companyName: "Aphron Software",
       companyLocation: "Sangli",
       companyRole: "Web Development Intern",
-      companyDuration: "02/2021 to 03/2021",
+      companyDuration: "02/2021 - 03/2021",
       companyFocus: "Web Development",
       companyTasks: [
         "Frontend-Tech.: HTML, CSS, JavaScript",
         "Backend-Tech.: PHP, SQL",
         "Advanced JavaScript",
         "Worked in Two Group Projects",
-        "Worked in VS Code Environment",
-      ],
-      companyNum: "03",
-    },
-    {
-      companyName: "DX Infosystem",
-      companyLocation: "Sangli",
-      companyRole: "Mobile Application Development Intern",
-      companyDuration: "05/2019 to 06/2019",
-      companyFocus: "Mobile Application Development",
-      companyTasks: [
-        "Frontend-Tech: HTML, CSS, Bootstrap Studio",
-        "Backend-Tech: PHP, SQL",
-        "Basic JavaScript",
-        "Worked in One Group Project",
-        "Worked in Bootstrap Studio Environment",
       ],
       companyNum: "04",
     },
+    // {
+    //   workType: "Internship",
+    //   companyName: "DX Infosystem",
+    //   companyLocation: "Sangli",
+    //   companyRole: "Mobile Application Development Intern",
+    //   companyDuration: "05/2019 to 06/2019",
+    //   companyFocus: "Mobile Application Development",
+    //   companyTasks: [
+    //     "Frontend-Tech: HTML, CSS, Bootstrap Studio",
+    //     "Backend-Tech: PHP, SQL",
+    //     "Basic JavaScript",
+    //     "Worked in One Group Project",
+    //     "Worked in Bootstrap Studio Environment",
+    //   ],
+    //   companyNum: "05",
+    // },
   ];
 
   return (
@@ -82,8 +98,8 @@ const Internship = () => {
               key={internship_index}
             >
               <div className="itd">
-                <i className="bi bi-door-open-fill card-icon"></i>
-                <span className="card-title">Internship</span>
+                <i className="bi bi-door-open-fill card-icon me-1"></i>
+                <span className="card-title">{internship.workType}</span>
               </div>
               <div>
                 <ul>

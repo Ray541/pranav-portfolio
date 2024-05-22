@@ -116,7 +116,7 @@ const Navbar = () => {
                   offset={-90}
                   className="nav-link navs"
                 >
-                  Internships
+                  Experience
                 </Link>
               </li>
               <li className="nav-item">
