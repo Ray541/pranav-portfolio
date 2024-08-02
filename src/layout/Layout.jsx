@@ -4,7 +4,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <main className="w-full h-[300vh]"></main>
+      <main className="w-full h-full"></main>
     </>
   );
 };
