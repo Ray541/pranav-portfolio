@@ -10,7 +10,7 @@ const Home = () => {
       className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:flex-row"
     >
       <div className="flex justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1">
-        <h1 className="text-4xl font-semibold text-gray-800 md:text-6xl lg:text-7xl">
+        <h1 className="text-4xl font-semibold md:text-6xl lg:text-7xl">
           Hi, I'm{" "}
           <span className="font-black text-blue-600 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
             Pranav Rao
@@ -29,7 +29,7 @@ const Home = () => {
           <a
             href={resume}
             target="_blank"
-            className="bg-gray-900 hover:bg-blue-700 focus:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md hover:translate-y-1 max-w-fit cursor-pointer"
+            className="bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 focus:bg-blue-700 dark:focus:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md hover:translate-y-1 max-w-fit cursor-pointer"
           >
             <svg
               className="fill-current w-4 h-4 mr-2"
