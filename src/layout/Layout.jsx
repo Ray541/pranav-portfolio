@@ -4,6 +4,7 @@ import Mode from "../components/Mode/Mode";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
+import LittleInfo from "../components/LittleInfo/LittleInfo";
 // Footer
 import Footer from "../components/Footer/Footer";
 
@@ -16,6 +17,7 @@ const Layout = () => {
         <Home />
         <About />
         <Projects />
+        <LittleInfo />
       </main>
       <Footer />
     </div>
