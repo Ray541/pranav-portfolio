@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
+import { MoonIcon, SunIcon } from "../../assets/constants";
 
 const Mode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -51,8 +52,9 @@ const Mode = () => {
     >
       <button
         onClick={toggleMode}
-        className="px-4 py-2 rounded bg-gray-950 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-100"
+        className="px-4 py-2 rounded bg-gray-950 dark:bg-gray-500 hover:bg-blue-700 text-gray-100 dark:text-gray-950 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium"
       >
+        {isDarkMode ? <SunIcon /> : <MoonIcon />}
         {isDarkMode ? "Light" : "Dark"}
       </button>
     </motion.div>
