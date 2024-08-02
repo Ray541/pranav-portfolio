@@ -1,5 +1,12 @@
+import Header from "../components/Header/Header";
+
 const Layout = () => {
-  return <div>Layout</div>;
+  return (
+    <>
+      <Header />
+      <main className="w-full h-[300vh]"></main>
+    </>
+  );
 };
 
 export default Layout;
