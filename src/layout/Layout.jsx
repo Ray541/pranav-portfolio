@@ -4,6 +4,8 @@ import Mode from "../components/Mode/Mode";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
+// Footer
+import Footer from "../components/Footer/Footer";
 
 const Layout = () => {
   return (
@@ -15,6 +17,7 @@ const Layout = () => {
         <About />
         <Projects />
       </main>
+      <Footer />
     </div>
   );
 };
