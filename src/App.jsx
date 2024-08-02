@@ -1,15 +1,7 @@
-import { useState } from "react";
+import Layout from "./layout/Layout";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-    </>
-  );
+  return <Layout />;
 }
 
 export default App;
