@@ -77,7 +77,7 @@ const Home = () => {
         </div>
       </div>
       <motion.div
-        className="hidden sm:block w-[300px] md:w-[400px] lg:w-[450px] overflow-hidden"
+        className="hidden sm:block w-[300px] lg:w-[450px] overflow-hidden"
         animate={{ y: [0, -5, 0], x: [5, -5, 0, -5, 5] }}
         transition={{ duration: 5, repeat: Infinity }}
       >
