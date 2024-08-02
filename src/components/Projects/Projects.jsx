@@ -50,7 +50,7 @@ const Projects = () => {
       <h2 className="text-6xl font-bold mb-5">
         My <span className="text-blue-500">Work</span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full lg:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 lg:px-24">
         {PROJECTS.map((project, index) => (
           <div
             key={index}
