@@ -4,6 +4,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  GraduationIcon,
   CopyIcon,
   TickIcon,
 } from "../../assets/constants";
@@ -96,7 +97,7 @@ const About = () => {
         </div>
 
         {/* Skills */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-1 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
           <h3 className="text-2xl font-black mb-2 text-blue-500">Skills</h3>
           <div className="flex items-center justify-center flex-wrap gap-3">
             {SKILLS.map((skill, skillIndex) => (
@@ -110,46 +111,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Education */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out">
-          <h3 className="text-2xl font-black mb-2 text-blue-500">Education</h3>
-          <div className="flex items-start justify-center flex-col gap-5 sm:flex-row sm:justify-around">
-            {EDUCATION.map((education, index) => (
-              <div
-                key={`${education.degree}-${index}`}
-                className="bg-gray-100 dark:bg-gray-900 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
-              >
-                <p className="text-xl text-blue-700 font-semibold">
-                  Degree:{" "}
-                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
-                    {education.degree}
-                  </span>
-                </p>
-                <p className="text-xl text-blue-700 font-semibold">
-                  College:{" "}
-                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
-                    {education.college}
-                  </span>
-                </p>
-                <p className="text-xl text-blue-700 font-semibold">
-                  Major:{" "}
-                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
-                    {education.major}
-                  </span>
-                </p>
-                <p className="text-xl text-blue-700 font-semibold">
-                  Passing Year:
-                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
-                    {education.passingout}
-                  </span>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Info */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-blue-500">Contact</h3>
           <button
             className="bg-gray-950 hover:bg-blue-700 focus:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer"
@@ -191,6 +154,45 @@ const About = () => {
             >
               <InstagramIcon />
             </a>
+          </div>
+        </div>
+
+        {/* Education */}
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col gap-3">
+          <h3 className="text-2xl font-black mb-2 text-blue-500">Education</h3>
+          <div className="flex items-start justify-center flex-col gap-5 sm:flex-row sm:justify-around">
+            {EDUCATION.map((education, index) => (
+              <div
+                key={`${education.degree}-${index}`}
+                className="bg-gray-100 dark:bg-gray-900 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+              >
+                <p className="text-xl text-blue-700 font-semibold flex gap-1">
+                  Degree:{" "}
+                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
+                    {education.degree}
+                  </span>
+                  <GraduationIcon />
+                </p>
+                <p className="text-xl text-blue-700 font-semibold">
+                  College:{" "}
+                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
+                    {education.college}
+                  </span>
+                </p>
+                <p className="text-xl text-blue-700 font-semibold">
+                  Major:{" "}
+                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
+                    {education.major}
+                  </span>
+                </p>
+                <p className="text-xl text-blue-700 font-semibold">
+                  Passing Year:
+                  <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
+                    {education.passingout}
+                  </span>
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
