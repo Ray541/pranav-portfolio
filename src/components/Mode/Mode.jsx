@@ -13,19 +13,12 @@ if (typeof window !== "undefined") {
 }
 
 const Mode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [threshold, setThreshold] = useState(0);
-
-  // useEffect(() => {
-  //   // Check localStorage for dark mode preference on initial load
-  //   const darkModePreference = localStorage.getItem("darkMode") === "true";
-  //   setIsDarkMode(darkModePreference);
-  //   if (darkModePreference) {
-  //     document.documentElement.classList.add("dark");
-  //   }
-  // }, []);
 
   const toggleMode = () => {
     const newMode = !isDarkMode;
