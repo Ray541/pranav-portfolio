@@ -15,8 +15,14 @@ const Contact = () => {
             If you have any questions or want to get in touch, feel free to drop me an email. I
             would love to hear from you!
           </p>
-          <p className="text-xl mb-8 text-center">Let's Build Together</p>
+          <p className="text-3xl mb-8 text-center">Let's Build Together</p>
           <div className="flex justify-center">
+            {/* <a
+              href="mailto:pranavrao541@gmail.com"
+              className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
+            >
+              <span>Let's Connect</span> <SendIcon />
+            </a> */}
             <a
               href="mailto:pranavrao541@gmail.com"
               className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
