@@ -56,15 +56,18 @@ const Experience = () => {
               {/* <p className="flex flex-col bg-gray-100 dark:bg-gray-900 p-2 rounded-lg gap-1.5 shadowt text-lg">
                   {experience.description}
                 </p> */}
-              <div className="flex gap-2 items-center justify-center flex-wrap">
-                {experience.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-gray-950 text-gray-100 p-2 rounded-md hover:bg-blue-500 transition-all duration-200 ease-in-out cursor-default"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              <div className="bg-gray-100 dark:bg-gray-900 p-2 rounded-md">
+                <h4 className="text-xl font-medium">Tech Stack: </h4>
+                <div className="flex gap-2 items-center justify-center flex-wrap">
+                  {experience.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-gray-950 text-gray-100 p-2 rounded-md hover:bg-blue-500 transition-all duration-200 ease-in-out cursor-default"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
