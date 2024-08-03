@@ -6,6 +6,7 @@ import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import LittleInfo from "../components/LittleInfo/LittleInfo";
 import Contact from "../components/Contact/Contact";
+import Experience from "../components/Experience/Experience";
 // Footer
 import Footer from "../components/Footer/Footer";
 
@@ -19,6 +20,7 @@ const Layout = () => {
         <About />
         <Projects />
         <LittleInfo />
+        <Experience />
         <Contact />
       </main>
       <Footer />
