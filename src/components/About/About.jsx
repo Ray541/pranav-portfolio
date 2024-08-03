@@ -62,7 +62,10 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="flex flex-col items-center justify-center px-5 py-16 gap-5">
+    <section
+      id="about"
+      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50 dark:bg-gray-900"
+    >
       <h2 className="text-6xl font-bold  mb-5">
         <span className="text-blue-500">About</span> Me
       </h2>
