@@ -62,7 +62,7 @@ const Mode = () => {
     >
       <button
         onClick={toggleMode}
-        className="px-4 py-2 rounded bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium"
+        className="p-2 rounded-full lg:px-4 lg:py-2 lg:rounded rounded bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium"
       >
         {isDarkMode ? <SunIcon /> : <MoonIcon />}
         <span className="hidden lg:block">{isDarkMode ? "Light" : "Dark"}</span>

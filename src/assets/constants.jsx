@@ -198,6 +198,30 @@ const SendIcon = () => (
   </svg>
 );
 
+const ArrowUpIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6" // Adjust size as needed
+  >
+    <path
+      d="M17 16L15 16C12.7909 16 11 14.2091 11 12L11 7"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8 10L11 7L14 10"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export {
   LinkedInIcon,
   GitHubIcon,
@@ -210,4 +234,5 @@ export {
   MoonIcon,
   SunIcon,
   SendIcon,
+  ArrowUpIcon,
 };

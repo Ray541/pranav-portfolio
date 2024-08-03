@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Mode from "../components/Mode/Mode";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 // Sections
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
@@ -15,7 +16,6 @@ const Layout = () => {
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Header />
       <main className="w-full h-full">
-        <Mode />
         <Home />
         <About />
         <Projects />
@@ -23,6 +23,8 @@ const Layout = () => {
         <Experience />
         <Contact />
       </main>
+      <Mode />
+      <ScrollToTop />
       <Footer />
     </div>
   );
