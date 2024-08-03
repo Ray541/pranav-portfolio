@@ -2,15 +2,36 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { MoonIcon, SunIcon } from "../../assets/constants";
 
+// Immediately set the dark mode class based on localStorage before the component mounts
+if (typeof window !== "undefined") {
+  const darkModePreference = localStorage.getItem("darkMode") === "true";
+  if (darkModePreference) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}
+
 const Mode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [threshold, setThreshold] = useState(0);
 
+  // useEffect(() => {
+  //   // Check localStorage for dark mode preference on initial load
+  //   const darkModePreference = localStorage.getItem("darkMode") === "true";
+  //   setIsDarkMode(darkModePreference);
+  //   if (darkModePreference) {
+  //     document.documentElement.classList.add("dark");
+  //   }
+  // }, []);
+
   const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    localStorage.setItem("darkMode", newMode);
   };
 
   const handleScroll = useCallback(() => {
