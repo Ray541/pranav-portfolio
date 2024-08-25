@@ -108,7 +108,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
         {/* Working on */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-950 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
           <h3 className="text-2xl font-black mb-2 text-blue-500">Working On</h3>
           <div className="w-full flex items-center justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {WORKINGON.map((workingon, index) => (
@@ -136,7 +136,7 @@ const About = () => {
         </div>
 
         {/* Skills */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-950 md:col-span-1 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
           <h3 className="text-2xl font-black mb-2 text-blue-500">Skills</h3>
           <div className="flex items-center justify-center flex-wrap gap-3">
             {SKILLS.map((skill, skillIndex) => (
@@ -151,7 +151,7 @@ const About = () => {
         </div>
 
         {/* Info */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-950 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-blue-500">Contact</h3>
           <button
             className="bg-gray-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer"
@@ -197,7 +197,7 @@ const About = () => {
         </div>
 
         {/* Education */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-950 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col gap-3">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col gap-3">
           <h3 className="text-2xl font-black mb-2 text-blue-500">Education</h3>
           <div className="flex items-start justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {EDUCATION.map((education, index) => (
