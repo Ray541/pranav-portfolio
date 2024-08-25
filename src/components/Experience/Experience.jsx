@@ -1,32 +1,62 @@
+import {
+  SiReact,
+  SiJavascript,
+  SiMui,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiPostgresql,
+  SiTypescript,
+  SiFirebase,
+  SiSupabase,
+  SiGit,
+  SiHtml5,
+  SiCss3,
+  SiPhp,
+  SiMysql,
+  SiWordpress,
+} from "react-icons/si";
+
 const EXPERIENCE = [
   {
     role: "Junior Frontend Web Developer",
     company: "Geopage Consultants (Bengaluru)",
-    // description:
-    //   "At Geopage Consultants, I focus on frontend development using (React.js, TypeScript, JavaScript, MUI, Tailwind CSS, etc.) and handle backend tasks with (Node.js and PGSQL). My role involves contributing to projects that integrate web development with civil engineering.",
-    tech: ["React.js", "JavaScript", "MUI", "Tailwind CSS", "Bootstrap", "Node.js", "PostgreSQL"],
+    tech: [
+      { icon: <SiReact />, name: "React.js" },
+      { icon: <SiJavascript />, name: "JavaScript" },
+      { icon: <SiMui />, name: "MUI" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <SiBootstrap />, name: "Bootstrap" },
+      { icon: <SiNodedotjs />, name: "Node.js" },
+      { icon: <SiPostgresql />, name: "PostgreSQL" },
+    ],
   },
   {
     role: "Frontend Web Developer Intern",
     company: "AntStack | Fullstack Serverless Consulting Company (Bengaluru)",
-    // description:
-    //   "During my internship at AntStack, I worked on frontend development with (React.js, TypeScript, and Tailwind CSS) and participated in [POC] and a major project. I also gained experience with Firebase and Supabase for backend and database management tasks.",
-    tech: ["React.js", "JavaScript", "TypeScript", "Tailwind CSS", "Firebase", "Supabase", "Git"],
+    tech: [
+      { icon: <SiReact />, name: "React.js" },
+      { icon: <SiJavascript />, name: "JavaScript" },
+      { icon: <SiTypescript />, name: "TypeScript" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiSupabase />, name: "Supabase" },
+      { icon: <SiGit />, name: "Git" },
+    ],
   },
   {
     role: "Full Stack Web Developer Intern",
     company: "techEnvision (Kolhapur)",
-    // description:
-    //   "At techEnvision, I worked on both frontend (HTML, CSS, Bootstrap-5) and backend (PHP, SQL) technologies. I contributed to three projects and enhanced my skills in advanced JavaScript and WordPress. It was a great learning experience.",
-    tech: ["HTML", "CSS", "Bootstrap-5", "PHP", "SQL", "JavaScript", "WordPress"],
+    tech: [
+      { icon: <SiHtml5 />, name: "HTML" },
+      { icon: <SiCss3 />, name: "CSS" },
+      { icon: <SiBootstrap />, name: "Bootstrap-5" },
+      { icon: <SiPhp />, name: "PHP" },
+      { icon: <SiMysql />, name: "SQL" },
+      { icon: <SiJavascript />, name: "JavaScript" },
+      { icon: <SiWordpress />, name: "WordPress" },
+    ],
   },
-  //   {
-  //     role: "Web Developer Intern",
-  //     company: "Aphron Software (Sangli)",
-  //     description:
-  //       "My role at Aphron Software involved frontend (HTML, CSS, JavaScript) development. I worked on two group projects, focusing on basic JavaScript and collaborative development.",
-  //     tech: ["HTML", "CSS", "JavaScript"],
-  //   },
 ];
 
 const Experience = () => {
@@ -53,18 +83,15 @@ const Experience = () => {
               <p className="text-xl font-medium">
                 Company: <span className="text-blue-500">{experience.company}</span>
               </p>
-              {/* <p className="flex flex-col bg-gray-100 dark:bg-gray-900 p-2 rounded-lg gap-1.5 shadowt text-lg">
-                  {experience.description}
-                </p> */}
-              <div className="bg-gray-100 dark:bg-gray-900 p-2 rounded-md">
+              <div className="bg-gray-200 dark:bg-gray-900 p-2 rounded-md hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
                 <h4 className="text-xl font-medium">Tech Stack: </h4>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
                   {experience.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-gray-950 text-gray-100 p-2 rounded-md hover:bg-blue-500 transition-all duration-200 ease-in-out cursor-default"
+                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-blue-500 transition-all duration-200 ease-in-out cursor-default flex items-center content-center gap-1.5"
                     >
-                      {tech}
+                      {tech.icon} {tech.name}
                     </span>
                   ))}
                 </div>
