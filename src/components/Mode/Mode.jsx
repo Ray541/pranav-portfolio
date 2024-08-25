@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { MoonIcon, SunIcon } from "../../assets/constants";
+import { TiWeatherSunny } from "react-icons/ti";
+import { BsMoonStars } from "react-icons/bs";
 
 // Immediately set the dark mode class based on localStorage before the component mounts
 if (typeof window !== "undefined") {
@@ -64,7 +65,7 @@ const Mode = () => {
         onClick={toggleMode}
         className="p-2 rounded-full lg:px-4 lg:py-2 lg:rounded bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium"
       >
-        {isDarkMode ? <SunIcon /> : <MoonIcon />}
+        {isDarkMode ? <TiWeatherSunny /> : <BsMoonStars />}
         <span className="hidden lg:block">{isDarkMode ? "Light" : "Dark"}</span>
       </button>
     </motion.div>
