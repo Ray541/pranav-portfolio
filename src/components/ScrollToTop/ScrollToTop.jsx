@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 //
-import { ArrowUpIcon } from "../../assets/constants";
+import { FiCornerLeftUp } from "react-icons/fi";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -54,8 +54,8 @@ const ScrollToTop = () => {
         onClick={scrollToTop}
         className="p-2 rounded-full bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium"
       >
-        <span className="text-lg">
-          <ArrowUpIcon />
+        <span className="text-md">
+          <FiCornerLeftUp />
         </span>
       </button>
     </motion.div>
