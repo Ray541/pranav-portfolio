@@ -1,4 +1,4 @@
-import { SendIcon } from "../../assets/constants";
+import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
   return (
@@ -25,9 +25,9 @@ const Contact = () => {
             </a> */}
             <a
               href="mailto:pranavrao541@gmail.com"
-              className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
+              className="bg-blue-500 hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
             >
-              <span>Let's Connect</span> <SendIcon />
+              <span>Let's Connect</span> <FiSend className="text-xl" />
             </a>
           </div>
         </div>
