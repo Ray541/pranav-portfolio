@@ -2,7 +2,7 @@ import pollifyProjectImage from "../../assets/pollifyproject.jpg";
 import instaCloneProjectImage from "../../assets/instacloneproject.jpg";
 import pocProjectImage from "../../assets/pocproject.jpg";
 import weatherProjectImage from "../../assets/weatherproject.jpg";
-import { ExpandIcon, GitHubIcon } from "../../assets/constants";
+import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 const PROJECTS = [
   {
@@ -80,18 +80,18 @@ const Projects = () => {
                 href={project.projectLink ? project.projectLink : `#`}
                 target={project.projectLink ? `_blank` : ``}
                 rel="noreferrer"
-                className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-0.5"
+                className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
               >
                 View Project
-                <ExpandIcon />
+                <FaUpRightFromSquare className="text-md" />
               </a>
               <a
                 href={project.projectGitLink ? project.projectGitLink : `#`}
                 target={project.projectGitLink ? `_blank` : ``}
                 rel="noreferrer"
-                className="bg-gray-500 text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-0.5"
+                className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
               >
-                <GitHubIcon />
+                <FaGithub className="text-lg" />
                 Git Project
               </a>
             </div>
