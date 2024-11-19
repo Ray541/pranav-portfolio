@@ -1,6 +1,4 @@
 import Header from "../components/Header/Header";
-import Mode from "../components/Mode/Mode";
-import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 // Sections
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
@@ -10,10 +8,15 @@ import Contact from "../components/Contact/Contact";
 import Experience from "../components/Experience/Experience";
 // Footer
 import Footer from "../components/Footer/Footer";
+// Components
+import Mode from "../components/Mode/Mode";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import CursorFollower from "../components/CursorFollower/CursorFollower";
 
 const Layout = () => {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <CursorFollower />
       <Header />
       <main className="w-full h-full">
         <Home />
