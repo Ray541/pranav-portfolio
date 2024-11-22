@@ -41,7 +41,7 @@ const Header = () => {
     <motion.header
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -10 }}
-      className="flex items-center justify-center w-full fixed top-10 z-10"
+      className={`flex items-center justify-center w-full fixed top-10 z-10 ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
     >
       <div className="flex gap-5 py-4 px-5 bg-gray-900 shadow-md border border-gray-500 rounded-full">
         {HEADER_ITEMS.map(item => (
