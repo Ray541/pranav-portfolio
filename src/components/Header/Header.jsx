@@ -43,9 +43,9 @@ const Header = () => {
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -10 }}
       className={`flex items-center justify-center w-full fixed top-10 z-10 ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
     >
-      <div className="flex gap-5 py-4 px-5 bg-gray-900 shadow-md border border-gray-500 rounded-full">
+      <div className="flex gap-5 py-4 px-5 bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/30 bg-clip-padding backdrop-filter backdrop-blur-sm border drop-shadow-lg rounded-full">
         {HEADER_ITEMS.map(item => (
-          <a key={item} href={`#${item}`} className="capitalize text-gray-100 lg:tracking-wider">
+          <a key={item} href={`#${item}`} className="capitalize font-bold text-gray-800 dark:text-gray-200 lg:tracking-wider transition-all duration-200">
             {item}
           </a>
         ))}

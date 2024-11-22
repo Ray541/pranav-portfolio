@@ -114,7 +114,7 @@ const About = () => {
             {WORKINGON.map((workingon, index) => (
               <div
                 key={`${workingon.domain}-${index}`}
-                className="flex flex-col bg-gray-200 dark:bg-gray-800 p-2 rounded-lg gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="flex flex-col bg-gray-200 dark:bg-gray-800 border border-gray-800/20 dark:border-gray-200/20 p-2 rounded-lg gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <h1 className="text-xl font-medium dark:text-gray-100">{workingon.domain}</h1>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
@@ -203,7 +203,7 @@ const About = () => {
             {EDUCATION.map((education, index) => (
               <div
                 key={`${education.degree}-${index}`}
-                className="bg-gray-200 dark:bg-gray-800 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="bg-gray-200 dark:bg-gray-800 border border-gray-800/20 dark:border-gray-200/20 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <p className="text-xl text-blue-700 font-semibold flex gap-1">
                   Degree:{" "}

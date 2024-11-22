@@ -48,11 +48,11 @@ const ScrollToTop = () => {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -10 }}
-      className="min-w-fit fixed bottom-14 right-2 flex gap-2 z-50"
+      className="min-w-fit fixed bottom-12 right-2 z-50"
     >
       <button
         onClick={scrollToTop}
-        className={`p-2 rounded-full bg-gray-900 dark:bg-gray-950 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-100 transition-all duration-300 flex gap-1.5 items-center justify-center font-medium ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-800 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-300 ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
       >
         <span className="text-md">
           <FiCornerLeftUp />

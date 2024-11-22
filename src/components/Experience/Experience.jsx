@@ -75,7 +75,7 @@ const Experience = () => {
           {EXPERIENCE.map((experience, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-800 md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3"
+              className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3"
             >
               <h3 className="text-2xl font-semibold">
                 Role: <span className="text-blue-500">{experience.role}</span>
@@ -83,7 +83,7 @@ const Experience = () => {
               <p className="text-xl font-medium">
                 Company: <span className="text-blue-500">{experience.company}</span>
               </p>
-              <div className="bg-gray-200 dark:bg-gray-900 p-2 rounded-md hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
+              <div className="bg-gray-200 dark:bg-gray-900 border border-gray-800/20 dark:border-gray-200/20 p-2 rounded-md hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
                 <h4 className="text-xl font-medium">Tech Stack: </h4>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
                   {experience.tech.map((tech, i) => (

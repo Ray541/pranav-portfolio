@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:flex- bg-gray-200 dark:bg-gray-950"
+      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:flex- bg-gray-100 dark:bg-gray-900"
     >
       <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
         <motion.h1
