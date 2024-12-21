@@ -2,30 +2,38 @@ import { useEffect, useState } from "react";
 
 const CursorFollower = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     let animationFrameId;
 
-    const updateMousePosition = e => {
-      animationFrameId = requestAnimationFrame(() => {
-        setPosition({ x: e.clientX, y: e.clientY });
-      });
+    const updateMousePosition = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const animate = () => {
+      setCurrentPosition((prev) => ({
+        x: prev.x + (position.x - prev.x) * 0.2, // Adjustable Shooth Effect
+        y: prev.y + (position.y - prev.y) * 0.2,
+      }));
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     window.addEventListener("mousemove", updateMousePosition);
+    animationFrameId = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []); // Remove `position` from dependencies
+  }, [position]);
 
   return (
     <div
-      className={`hidden lg:block fixed w-[15px] h-[15px] rounded-full bg-blue-500/10 dark:bg-gray-200/10 border border-gray-500 dark:border-gray-200 pointer-events-none z-[999] transition-transform duration-75`}
+      className={`hidden lg:block fixed w-[12px] h-[12px] rounded-full bg-blue-500/10 dark:bg-gray-200/10 border border-gray-500 dark:border-gray-200 backdrop-blur-[1.5px] pointer-events-none z-[999]`}
       style={{
-        top: `${position.y}px`,
-        left: `${position.x}px`,
+        top: `${currentPosition.y}px`,
+        left: `${currentPosition.x}px`,
         transform: "translate(-50%, -50%)",
       }}
     ></div>
