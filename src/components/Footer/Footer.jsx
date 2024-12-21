@@ -13,7 +13,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="p-4">
+    <footer className="p-4 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
       <div className="flex flex-col items-center md:flex-row justify-between gap-1">
         <p className="text-2xl flex items-center justify-center gap-1">
           Developed by <span className="text-blue-600">Pranav</span>
@@ -25,6 +25,7 @@ const Footer = () => {
             transition={{
               repeat: Infinity,
               repeatType: "loop",
+              delay:0.5
             }}
           >
             ❤️

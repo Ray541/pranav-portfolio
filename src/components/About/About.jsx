@@ -100,7 +100,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50 dark:bg-gray-900"
+      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
     >
       <h2 className="text-6xl font-bold  mb-5">
         <span className="text-blue-500">About</span> Me
@@ -114,7 +114,7 @@ const About = () => {
             {WORKINGON.map((workingon, index) => (
               <div
                 key={`${workingon.domain}-${index}`}
-                className="flex flex-col bg-gray-200 dark:bg-gray-800 border border-gray-800/20 dark:border-gray-200/20 p-2 rounded-lg gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="flex flex-col bg-gray-100/10 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-lg gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <h1 className="text-xl font-medium dark:text-gray-100">{workingon.domain}</h1>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
@@ -154,11 +154,11 @@ const About = () => {
         <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-blue-500">Contact</h3>
           <button
-            className="bg-gray-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer"
+            className="bg-gray-700 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer active:scale-95"
             onClick={handleCopyEmail}
           >
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}{" "}
-            <span>{emailCopied ? "Copied!" : "Copy Email"}</span>
+            <span className="tracking-wide">{emailCopied ? "Email Copied" : "Copy Email"}</span>
           </button>
           <div className="flex gap-5 items-center justify-center lg:justify-start">
             <a
@@ -203,7 +203,7 @@ const About = () => {
             {EDUCATION.map((education, index) => (
               <div
                 key={`${education.degree}-${index}`}
-                className="bg-gray-200 dark:bg-gray-800 border border-gray-800/20 dark:border-gray-200/20 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="bg-gray-100/10 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <p className="text-xl text-blue-700 font-semibold flex gap-1">
                   Degree:{" "}
@@ -225,7 +225,7 @@ const About = () => {
                   </span>
                 </p>
                 <p className="text-xl text-blue-700 font-semibold">
-                  Passing Year:
+                  Passing Year:{" "}
                   <span className="text-lg text-gray-900 dark:text-gray-100 font-medium">
                     {education.passingout}
                   </span>

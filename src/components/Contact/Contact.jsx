@@ -1,4 +1,6 @@
 import { FiSend } from "react-icons/fi";
+import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+
 
 const Contact = () => {
   return (
@@ -16,7 +18,7 @@ const Contact = () => {
             would love to hear from you!
           </p>
           <p className="text-3xl mb-8 text-center">Let's Build Together</p>
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center flex-col">
             {/* <a
               href="mailto:pranavrao541@gmail.com"
               className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
@@ -29,6 +31,41 @@ const Contact = () => {
             >
               <span>Let's Connect</span> <FiSend className="text-xl" />
             </a>
+            
+            <div className="mt-5 flex gap-6 items-center justify-center lg:justify-start">
+            <a
+              href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-700"
+            >
+              <SiLinkedin className="text-xl" />
+            </a>
+            <a
+              href="https://github.com/Ray541"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-700"
+            >
+              <SiGithub className="text-xl" />
+            </a>
+            <a
+              href="https://www.facebook.com/pranav.rao.338"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-700"
+            >
+              <SiFacebook className="text-xl" />
+            </a>
+            <a
+              href="https://www.instagram.com/pranav_rao0504"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-700"
+            >
+              <SiInstagram className="text-xl" />
+            </a>
+          </div>
           </div>
         </div>
       </section>

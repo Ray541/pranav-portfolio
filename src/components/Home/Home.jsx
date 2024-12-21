@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:flex- bg-gray-100 dark:bg-gray-900"
+      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:flex- bg-gray-200/30 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
     >
       <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
         <motion.h1
@@ -51,7 +51,7 @@ const Home = () => {
             <a
               href={resume}
               target="_blank"
-              className="bg-gray-700 dark:bg-gray-700 hover:bg-blue-700 dark:hover:bg-blue-700 focus:bg-blue-700 dark:focus:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer"
+              className="bg-gray-700 dark:bg-gray-700 hover:bg-blue-700 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointe active:scale-95r"
             >
               <MdOutlineFileDownload className="text-xl" />
               <span className="tracking-wide">Download CV</span>
@@ -62,7 +62,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-700 focus:text-blue-700"
+              className="hover:text-blue-700"
             >
               <SiLinkedin className="text-xl" />
             </a>
@@ -70,7 +70,7 @@ const Home = () => {
               href="https://github.com/Ray541"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-700 focus:text-blue-700"
+              className="hover:text-blue-700"
             >
               <SiGithub className="text-xl" />
             </a>
@@ -78,7 +78,7 @@ const Home = () => {
               href="https://www.facebook.com/pranav.rao.338"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-700 focus:text-blue-700"
+              className="hover:text-blue-700"
             >
               <SiFacebook className="text-xl" />
             </a>
@@ -86,7 +86,7 @@ const Home = () => {
               href="https://www.instagram.com/pranav_rao0504"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-700 focus:text-blue-700"
+              className="hover:text-blue-700"
             >
               <SiInstagram className="text-xl" />
             </a>

@@ -46,7 +46,7 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <section id="project" className="flex flex-col items-center justify-center px-5 py-16 gap-5">
+    <section id="project" className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
       <h2 className="text-6xl font-bold mb-5">
         My <span className="text-blue-500">Work</span>
       </h2>
@@ -68,11 +68,11 @@ const Projects = () => {
 
               <p className="text-xl my-4">
                 <span className="text-2xl font-medium text-blue-500">Description</span>:{" "}
-                <span className="text-lg">{project.projectDesc}</span>
+                <span className="text-lg font-normal">{project.projectDesc}</span>
               </p>
               <p className="text-xl">
                 <span className="font-bold text-blue-500">Technologies:</span>{" "}
-                <span className="text-lg">{project.projectTechnologies}</span>
+                <span className="text-lg font-normal">{project.projectTechnologies}</span>
               </p>
             </div>
             <div className="flex flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">

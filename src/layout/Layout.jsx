@@ -15,7 +15,7 @@ import CursorFollower from "../components/CursorFollower/CursorFollower";
 
 const Layout = () => {
   return (
-    <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div className="duration-300">
       <CursorFollower />
       <Header />
       <main className="w-full h-full">

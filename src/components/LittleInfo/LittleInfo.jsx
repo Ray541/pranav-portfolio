@@ -3,7 +3,7 @@ const LittleInfo = () => {
   return (
     <section
       id="little-info"
-      className="px-5 py-5 text-3xl cursor-none bg-gray-100 dark:bg-gray-900 dark:border-t-2 dark:border-b-2"
+      className="px-5 py-5 text-3xl cursor-none bg-gray-50/10 border-t-2 border-b-2 dark:bg-gray-900 dark:border-t-2 dark:border-b-2"
     >
       <motion.div
         animate={{ 
