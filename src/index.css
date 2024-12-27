@@ -56,7 +56,7 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  transition: transform 4.5s ease;
+  transition: transform 4.5s ease-in-out;
 }
 
 .groupForImage:hover img {
