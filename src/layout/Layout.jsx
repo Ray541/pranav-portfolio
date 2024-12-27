@@ -1,4 +1,7 @@
+// Header
 import Header from "../components/Header/Header";
+// Main
+import Main from "./Main";
 // Sections
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
@@ -21,14 +24,14 @@ const Layout = () => {
     <div className="duration-300 overflow-hidden">
       <CursorFollower />
       <Header />
-      <main className="w-full h-full">
+      <Main className="w-full h-full">
         <Home />
         <About />
         <Projects />
         <LittleInfo />
         <Experience />
         <Contact />
-      </main>
+      </Main>
       <Mode />
       <ScrollToTop />
       <Footer />
