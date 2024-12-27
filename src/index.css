@@ -43,3 +43,23 @@ body {
 :focus {
   outline: unset;
 }
+
+.groupForImage {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.groupForImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 4.5s ease;
+}
+
+.groupForImage:hover img {
+  /* Scroll the image only by its height minus the container's height */
+  transform: translateY(calc(-100% + 300px));
+}
