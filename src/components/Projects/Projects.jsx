@@ -48,58 +48,62 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
+      className="flex flex-col items-center justify-center gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
     >
-      <h2 className="text-6xl font-bold mb-5">
-        My <span className="text-primary">Work</span>
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 xl:px-24">
-        {PROJECTS.map((project, index) => (
-          <div
-            key={index}
-            className="bg-gray-100 dark:bg-gray-900 p-5 rounded-lg shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
-          >
-            <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
-            <div>
-              <div className="w-full h-[300px] overflow-hidden rounded-md border group">
-                <img
-                  src={project.projectImage}
-                  alt=""
-                  className={`transform transition-all duration-[5000ms] group-hover:-translate-y-full`}
-                />
-              </div>
+      <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-20 right-20 blur-3xl opacity-90"></div>
+      <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute bottom-20 left-0 blur-3xl opacity-50"></div>
+      <div className="w-full h-full flex items-center justify-center flex-col backdrop-filter backdrop-blur-3xl px-5 py-16">
+        <h2 className="text-6xl font-bold mb-5">
+          My <span className="text-primary">Work</span>
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 xl:px-24">
+          {PROJECTS.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-100/10 dark:bg-gray-900 p-5 rounded-lg shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
+            >
+              <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
+              <div>
+                <div className="w-full h-[300px] overflow-hidden rounded-md border group">
+                  <img
+                    src={project.projectImage}
+                    alt=""
+                    className={`transform transition-all duration-[5000ms] group-hover:-translate-y-full`}
+                  />
+                </div>
 
-              <p className="text-xl my-4">
-                <span className="text-xl font-bold text-primary">Description</span>:{" "}
-                <span className="text-lg font-normal">{project.projectDesc}</span>
-              </p>
-              <p className="text-xl">
-                <span className="font-bold text-primary">Technologies:</span>{" "}
-                <span className="text-lg font-normal">{project.projectTechnologies}</span>
-              </p>
+                <p className="text-xl my-4">
+                  <span className="text-xl font-bold text-primary">Description</span>:{" "}
+                  <span className="text-lg font-normal">{project.projectDesc}</span>
+                </p>
+                <p className="text-xl">
+                  <span className="font-bold text-primary">Technologies:</span>{" "}
+                  <span className="text-lg font-normal">{project.projectTechnologies}</span>
+                </p>
+              </div>
+              <div className="flex items-center justify-center flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">
+                <a
+                  href={project.projectLink ? project.projectLink : `#`}
+                  target={project.projectLink ? `_blank` : ``}
+                  rel="noreferrer"
+                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                >
+                  View Project
+                  <FaUpRightFromSquare className="text-md" />
+                </a>
+                <a
+                  href={project.projectGitLink ? project.projectGitLink : `#`}
+                  target={project.projectGitLink ? `_blank` : ``}
+                  rel="noreferrer"
+                  className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                >
+                  <FaGithub className="text-lg" />
+                  Git Project
+                </a>
+              </div>
             </div>
-            <div className="flex items-center justify-center flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">
-              <a
-                href={project.projectLink ? project.projectLink : `#`}
-                target={project.projectLink ? `_blank` : ``}
-                rel="noreferrer"
-                className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
-              >
-                View Project
-                <FaUpRightFromSquare className="text-md" />
-              </a>
-              <a
-                href={project.projectGitLink ? project.projectGitLink : `#`}
-                target={project.projectGitLink ? `_blank` : ``}
-                rel="noreferrer"
-                className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
-              >
-                <FaGithub className="text-lg" />
-                Git Project
-              </a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
