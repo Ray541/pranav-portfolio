@@ -8,14 +8,8 @@ const useLenis = () => {
       lerp: 0.01,
       smooth: true,
       smoothWheel: true,
-      syncTouch: true,
-      syncTouchLerp: 1.5,
       duration: 1.5,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    lenis.on("scroll", ({ scroll }) => {
-      console.log("Current scroll position:", scroll);
     });
 
     function raf(time) {
