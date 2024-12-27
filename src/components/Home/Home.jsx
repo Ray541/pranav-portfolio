@@ -1,5 +1,5 @@
 // import pranavImage from "../../assets/pranav.jpg";
-import resume from "../../assets/Pranav's_Resume.pdf";
+import resume from "../../../public/assets/Pranav's_Resume.pdf";
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
