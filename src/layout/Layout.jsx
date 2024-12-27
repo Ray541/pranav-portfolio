@@ -1,7 +1,4 @@
-// Header
 import Header from "../components/Header/Header";
-// Main
-import Main from "./Main";
 // Sections
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
@@ -15,23 +12,20 @@ import Footer from "../components/Footer/Footer";
 import Mode from "../components/Mode/Mode";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import CursorFollower from "../components/CursorFollower/CursorFollower";
-import useLenis from "../hooks/useLenis";
 
 const Layout = () => {
-  useLenis();
-
   return (
     <div className="duration-300 overflow-hidden">
       <CursorFollower />
       <Header />
-      <Main className="w-full h-full">
+      <main className="w-full h-full">
         <Home />
         <About />
         <Projects />
         <LittleInfo />
         <Experience />
         <Contact />
-      </Main>
+      </main>
       <Mode />
       <ScrollToTop />
       <Footer />
