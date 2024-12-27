@@ -53,7 +53,7 @@ const Projects = () => {
       <h2 className="text-6xl font-bold mb-5">
         My <span className="text-primary">Work</span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 lg:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 xl:px-24">
         {PROJECTS.map((project, index) => (
           <div
             key={index}
@@ -61,7 +61,7 @@ const Projects = () => {
           >
             <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
             <div>
-              <div className="w-full h-[200px] overflow-hidden rounded-md border group">
+              <div className="w-full h-[300px] overflow-hidden rounded-md border group">
                 <img
                   src={project.projectImage}
                   alt=""
@@ -78,7 +78,7 @@ const Projects = () => {
                 <span className="text-lg font-normal">{project.projectTechnologies}</span>
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">
+            <div className="flex items-center justify-center flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">
               <a
                 href={project.projectLink ? project.projectLink : `#`}
                 target={project.projectLink ? `_blank` : ``}

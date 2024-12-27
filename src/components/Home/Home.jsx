@@ -16,10 +16,11 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap p-3 md:p-0 md:flex- bg-gray-200/30 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
+      className="h-screen flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap md:flex- bg-gray-200/30 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
     >
-      <div className="w-[200px] h-[200px] rounded-full bg-indigo-500 -z-10 absolute top-40 left-0 blur-3xl opacity-90"></div>
-      <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl">
+      <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-20 left-0 blur-3xl opacity-90"></div>
+      <div className="w-[150px] h-[150px] rounded-full bg-primary -z-10 absolute bottom-20 right-0 blur-3xl opacity-50"></div>
+      <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl p-3 md:p-0">
         <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
           <motion.h1
             initial={introTitleInitial}
