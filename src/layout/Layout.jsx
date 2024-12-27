@@ -15,7 +15,7 @@ import CursorFollower from "../components/CursorFollower/CursorFollower";
 
 const Layout = () => {
   return (
-    <div className="duration-300">
+    <div className="duration-300 overflow-hidden">
       <CursorFollower />
       <Header />
       <main className="w-full h-full">
