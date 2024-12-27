@@ -7,12 +7,12 @@ const CursorFollower = () => {
   useEffect(() => {
     let animationFrameId;
 
-    const updateMousePosition = (e) => {
+    const updateMousePosition = e => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
     const animate = () => {
-      setCurrentPosition((prev) => ({
+      setCurrentPosition(prev => ({
         x: prev.x + (position.x - prev.x) * 0.2, // Adjustable Shooth Effect
         y: prev.y + (position.y - prev.y) * 0.2,
       }));
@@ -30,7 +30,7 @@ const CursorFollower = () => {
 
   return (
     <div
-      className={`hidden lg:block fixed w-[12px] h-[12px] rounded-full bg-blue-500/10 dark:bg-gray-200/10 border border-gray-500 dark:border-gray-200 backdrop-blur-[1.5px] pointer-events-none z-[999]`}
+      className={`hidden lg:block fixed w-[12px] h-[12px] rounded-full bg-gray-200/10 dark:bg-gray-200/10 border border-gray-500 dark:border-gray-200 backdrop-blur-[1.5px] pointer-events-none z-[999]`}
       style={{
         top: `${currentPosition.y}px`,
         left: `${currentPosition.x}px`,
