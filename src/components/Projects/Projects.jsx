@@ -68,6 +68,7 @@ const Projects = () => {
                   <img
                     src={project.projectImage}
                     alt=""
+                    loading="lazy"
                     className="absolute top-0 left-0 w-full h-auto transition-transform duration-[5000ms]"
                   />
                 </div>
