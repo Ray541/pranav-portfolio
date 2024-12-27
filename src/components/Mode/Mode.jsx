@@ -63,7 +63,9 @@ const Mode = () => {
     >
       <button
         onClick={toggleMode}
-        className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-800 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-300 flex gap-1.5 items-center justify-center font-medium ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 hover:bg-primary dark:hover:bg-primary text-gray-800 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-300 flex gap-1.5 items-center justify-center font-medium ${
+          isVisible ? "pointer-events-auto" : "pointer-events-none"
+        }`}
       >
         {isDarkMode ? <TiWeatherSunny /> : <BsMoonStars />}
         {/* <span className="hidden lg:block">{isDarkMode ? "Light" : "Dark"}</span> */}

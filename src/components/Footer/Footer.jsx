@@ -15,8 +15,8 @@ const Footer = () => {
   return (
     <footer className="p-4 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
       <div className="flex flex-col items-center md:flex-row justify-between gap-1">
-        <p className="text-2xl flex items-center justify-center gap-1">
-          Developed by <span className="text-blue-600">Pranav</span>
+        <p className="font-black flex items-center justify-center gap-1">
+          Developed by <span className="text-primary">Pranav</span>
           <motion.span
             className="hover:scale-125 transition-all duration-150 ease-in-out"
             animate={{
@@ -25,14 +25,16 @@ const Footer = () => {
             transition={{
               repeat: Infinity,
               repeatType: "loop",
-              delay:0.5
+              delay: 0.5,
             }}
           >
             ❤️
           </motion.span>
         </p>
-        <p className="text-blue-500 font-semibold">{time.toLocaleTimeString()}</p>
-        <p className="text-lg md:mt-0">Copyright &copy; {new Date().getFullYear()}</p>
+        <p className="text-primary font-black">{time.toLocaleTimeString()}</p>
+        <p className="font-black md:mt-0">
+          Copyright <span className="text-primary">&copy;</span> {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );

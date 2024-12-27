@@ -46,17 +46,20 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <section id="project" className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
+    <section
+      id="project"
+      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
+    >
       <h2 className="text-6xl font-bold mb-5">
-        My <span className="text-blue-500">Work</span>
+        My <span className="text-primary">Work</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 lg:px-24">
         {PROJECTS.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-100 dark:bg-gray-900 p-5 rounded-lg shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-blue-500 flex flex-col flex-wrap items-center justify-between gap-3"
+            className="bg-gray-100 dark:bg-gray-900 p-5 rounded-lg shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
           >
-            <p className="w-full text-4xl font-bold text-blue-500">{project.projectName}</p>
+            <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
             <div>
               <div className="w-full h-[200px] overflow-hidden rounded-md border group">
                 <img
@@ -67,11 +70,11 @@ const Projects = () => {
               </div>
 
               <p className="text-xl my-4">
-                <span className="text-2xl font-medium text-blue-500">Description</span>:{" "}
+                <span className="text-xl font-bold text-primary">Description</span>:{" "}
                 <span className="text-lg font-normal">{project.projectDesc}</span>
               </p>
               <p className="text-xl">
-                <span className="font-bold text-blue-500">Technologies:</span>{" "}
+                <span className="font-bold text-primary">Technologies:</span>{" "}
                 <span className="text-lg font-normal">{project.projectTechnologies}</span>
               </p>
             </div>
@@ -80,7 +83,7 @@ const Projects = () => {
                 href={project.projectLink ? project.projectLink : `#`}
                 target={project.projectLink ? `_blank` : ``}
                 rel="noreferrer"
-                className="bg-blue-500 hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
+                className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
               >
                 View Project
                 <FaUpRightFromSquare className="text-md" />

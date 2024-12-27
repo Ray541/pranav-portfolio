@@ -61,12 +61,15 @@ const EXPERIENCE = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
+    <section
+      id="experience"
+      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
+    >
       <h2 className="text-6xl font-bold mb-5">
-        My <span className="text-blue-500">Experience</span>
+        My <span className="text-primary">Experience</span>
       </h2>
       <div className="max-w-5xl mx-auto">
-        <p className="text-xl mb-5 text-center">
+        <p className="text-xl font-normal mb-5 text-center">
           With a passion for crafting exceptional digital experiences, I have honed my skills in web
           and frontend development through hands-on experience and continuous learning. Below is a
           snapshot of my journey in creating dynamic, user-centric web solutions.
@@ -75,21 +78,21 @@ const Experience = () => {
           {EXPERIENCE.map((experience, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg shadow-md bg-transparent md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-blue-500 transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-1"
+              className="p-4 rounded-lg shadow-md bg-transparent md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-1"
             >
-              <h3 className="text-xl font-semibold">
-                Role: <span className="text-blue-500">{experience.role}</span>
+              <h3 className="text-2xl font-bold">
+                Role: <span className="text-primary">{experience.role}</span>
               </h3>
-              <p className="text-lg font-medium">
-                Company: <span className="text-blue-500">{experience.company}</span>
+              <p className="text-lg font-semibold">
+                Company: <span className="text-primary">{experience.company}</span>
               </p>
               <div className="bg-gray-100/10 dark:bg-gray-900 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-md hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
-                <h4 className="text-xl font-medium">Tech Stack: </h4>
+                <h4 className="text-lg font-medium">Tech Stack: </h4>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
                   {experience.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-blue-500 transition-all duration-200 ease-in-out cursor-default flex items-center content-center gap-1.5"
+                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-default flex items-center content-center gap-1.5"
                     >
                       {tech.icon} {tech.name}
                     </span>

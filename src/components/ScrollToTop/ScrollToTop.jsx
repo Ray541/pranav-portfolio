@@ -52,7 +52,9 @@ const ScrollToTop = () => {
     >
       <button
         onClick={scrollToTop}
-        className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 hover:bg-blue-700 dark:hover:bg-blue-700 text-gray-800 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-300 ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 hover:bg-primary dark:hover:bg-primary text-gray-800 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-300 ${
+          isVisible ? "pointer-events-auto" : "pointer-events-none"
+        }`}
       >
         <span className="text-md">
           <FiCornerLeftUp />
