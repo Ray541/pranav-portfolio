@@ -18,15 +18,9 @@ const Contact = () => {
           </p>
           <p className="text-3xl mb-8 text-center">Let's Build Together</p>
           <div className="flex justify-center items-center flex-col">
-            {/* <a
-              href="mailto:pranavrao541@gmail.com"
-              className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
-            >
-              <span>Let's Connect</span> <SendIcon />
-            </a> */}
             <a
               href="mailto:pranavrao541@gmail.com"
-              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1"
+              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1 active:scale-95"
             >
               <span>Let's Connect</span> <FiSend className="text-xl" />
             </a>
@@ -38,7 +32,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="hover:text-primary"
               >
-                <SiLinkedin className="text-xl" />
+                <SiLinkedin className="text-xl active:scale-95" />
               </a>
               <a
                 href="https://github.com/Ray541"
@@ -46,7 +40,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="hover:text-primary"
               >
-                <SiGithub className="text-xl" />
+                <SiGithub className="text-xl active:scale-95" />
               </a>
               <a
                 href="https://www.facebook.com/pranav.rao.338"
@@ -54,7 +48,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="hover:text-primary"
               >
-                <SiFacebook className="text-xl" />
+                <SiFacebook className="text-xl active:scale-95" />
               </a>
               <a
                 href="https://www.instagram.com/pranav_rao0504"
@@ -62,7 +56,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="hover:text-primary"
               >
-                <SiInstagram className="text-xl" />
+                <SiInstagram className="text-xl active:scale-95" />
               </a>
             </div>
           </div>

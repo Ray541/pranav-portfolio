@@ -165,7 +165,7 @@ const About = () => {
               href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary text-lg"
+              className="hover:text-primary text-lg active:scale-95"
             >
               <SiLinkedin />
             </a>
@@ -173,7 +173,7 @@ const About = () => {
               href="https://github.com/Ray541"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary text-lg"
+              className="hover:text-primary text-lg active:scale-95"
             >
               <SiGithub />
             </a>
@@ -181,7 +181,7 @@ const About = () => {
               href="https://www.facebook.com/pranav.rao.338"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary text-lg"
+              className="hover:text-primary text-lg active:scale-95"
             >
               <SiFacebook />
             </a>
@@ -189,7 +189,7 @@ const About = () => {
               href="https://www.instagram.com/pranav_rao0504"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary text-lg"
+              className="hover:text-primary text-lg active:scale-95"
             >
               <SiInstagram />
             </a>

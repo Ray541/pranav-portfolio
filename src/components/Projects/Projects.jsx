@@ -83,7 +83,7 @@ const Projects = () => {
                 href={project.projectLink ? project.projectLink : `#`}
                 target={project.projectLink ? `_blank` : ``}
                 rel="noreferrer"
-                className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
+                className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
               >
                 View Project
                 <FaUpRightFromSquare className="text-md" />
@@ -92,7 +92,7 @@ const Projects = () => {
                 href={project.projectGitLink ? project.projectGitLink : `#`}
                 target={project.projectGitLink ? `_blank` : ``}
                 rel="noreferrer"
-                className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5"
+                className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
               >
                 <FaGithub className="text-lg" />
                 Git Project
