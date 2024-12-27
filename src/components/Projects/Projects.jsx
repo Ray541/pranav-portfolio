@@ -64,11 +64,11 @@ const Projects = () => {
             >
               <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
               <div>
-                <div className="w-full h-[300px] overflow-hidden rounded-md border group">
+                <div className="w-full h-[300px] overflow-hidden rounded-md border groupForImage relative">
                   <img
                     src={project.projectImage}
                     alt=""
-                    className={`transform transition-all duration-[5000ms] group-hover:-translate-y-full`}
+                    className="absolute top-0 left-0 w-full h-auto transition-transform duration-[5000ms]"
                   />
                 </div>
 
