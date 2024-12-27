@@ -108,7 +108,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
         {/* Working on */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3 pointer-events-none">
           <h3 className="text-2xl font-black mb-2 text-primary">Working On</h3>
           <div className="w-full flex items-center justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {WORKINGON.map((workingon, index) => (
