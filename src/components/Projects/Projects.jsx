@@ -1,7 +1,7 @@
-import pollifyProjectImage from "../../../public/assets/pollifyproject.jpg";
-import instaCloneProjectImage from "../../../public/assets/instacloneproject.jpg";
-import pocProjectImage from "../../../public/assets/pocproject.jpg";
-import weatherProjectImage from "../../../public/assets/weatherproject.jpg";
+import pollifyProjectImage from "/assets/pollifyproject.jpg";
+import instaCloneProjectImage from "/assets/instacloneproject.jpg";
+import pocProjectImage from "/assets/pocproject.jpg";
+import weatherProjectImage from "/assets/weatherproject.jpg";
 import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 const PROJECTS = [
