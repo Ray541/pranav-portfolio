@@ -51,7 +51,7 @@ const Home = () => {
               <a
                 href={resume}
                 target="_blank"
-                className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit cursor-pointer active:scale-95"
+                className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95"
               >
                 <MdOutlineFileDownload className="text-xl" />
                 <span className="tracking-wide">Download CV</span>
