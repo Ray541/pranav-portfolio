@@ -13,10 +13,10 @@ import Mode from "../components/Mode/Mode";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import CursorFollower from "../components/CursorFollower/CursorFollower";
 // Hook
-// import useLenis from "../hooks/useLenis";
+import useLenis from "../hooks/useLenis";
 
 const Layout = () => {
-  // useLenis();
+  useLenis();
 
   return (
     <div className="duration-300 overflow-hidden">

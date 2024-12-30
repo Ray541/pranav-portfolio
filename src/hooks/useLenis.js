@@ -6,9 +6,14 @@ const useLenis = () => {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.01,
+      duration: 1.7,
+      direction: "vertical",
+      gestureDirection: "vertical",
       smooth: true,
       smoothWheel: true,
-      duration: 1.5,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
