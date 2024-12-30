@@ -94,7 +94,7 @@ const Experience = () => {
                     {experience.tech.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-none flex items-center content-center gap-1.5"
+                        className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-none flex items-center content-center gap-1.5 hover:scale-95"
                       >
                         {tech.icon} {tech.name}
                       </span>

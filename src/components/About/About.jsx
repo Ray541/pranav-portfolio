@@ -108,7 +108,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
         {/* Working on */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3 pointer-events-none">
+        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
           <h3 className="text-2xl font-black mb-2 text-primary">Working On</h3>
           <div className="w-full flex items-center justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {WORKINGON.map((workingon, index) => (
@@ -121,7 +121,7 @@ const About = () => {
                   {workingon.technologies.map((tech, techIndex) => (
                     <span
                       key={`${workingon.domain}-${tech.name}-${techIndex}`}
-                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5"
+                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5 hover:scale-95"
                     >
                       {tech.icon} {tech.name}
                     </span>
@@ -142,7 +142,7 @@ const About = () => {
             {SKILLS.map((skill, skillIndex) => (
               <span
                 key={`${skill.name}-${skillIndex}`}
-                className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5"
+                className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
               >
                 {skill.icon} {skill.name}
               </span>
@@ -154,7 +154,7 @@ const About = () => {
         <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-primary">Contact</h3>
           <button
-            className="bg-gray-700 hover:bg-primary text-white font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95"
+            className="bg-gray-700 hover:bg-primary text-white font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
             onClick={handleCopyEmail}
           >
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}{" "}
