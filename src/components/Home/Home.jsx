@@ -1,6 +1,7 @@
 import pranavImage from "../../../public/assets/Pranav-Rao-Portfolio-Name-and-Role-Light.png";
 import resume from "/assets/Pranav's_Resume.pdf";
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+import { BiSolidMouse } from "react-icons/bi";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
 
@@ -20,6 +21,11 @@ const Home = () => {
     >
       <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-10 left-0 blur-3xl opacity-90"></div>
       <div className="w-[150px] h-[150px] rounded-full bg-primary -z-10 absolute bottom-20 right-0 blur-3xl opacity-50"></div>
+      <div className="hidden absolute top-5 right-10 z-10 lg:flex lg:items-center lg:justify-center lg:flex-col lg:gap-1">
+        <div className="w-[1px] h-5 bg-gray-400 dark:bg-gray-400"></div>
+        <BiSolidMouse className="text-xl text-gray-700 dark:text-gray-100" />
+        <div className="w-[1px] h-8 bg-gray-400 dark:bg-gray-400"></div>
+      </div>
       <div className="hidden sm:block sm:w-64 overflow-hidden absolute z-10 bottom-0 left-0 sm:left-10 hover:scale-90 transition-all duration-150">
         <img className="w-[100%] h-[100%]" src={pranavImage} alt="" />
       </div>
