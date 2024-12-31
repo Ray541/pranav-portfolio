@@ -1,4 +1,4 @@
-// import pranavImage from "../../assets/pranav.jpg";
+import pranavImage from "../../../public/assets/Pranav-Rao-Portfolio-Name-and-Role-Light.png";
 import resume from "/assets/Pranav's_Resume.pdf";
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -18,8 +18,11 @@ const Home = () => {
       id="home"
       className="h-dvh flex items-center justify-center md:gap-10 lg:gap-0 md:justify-evenly flex-wrap md:flex- bg-gray-200/30 text-gray-900 dark:bg-gray-900 dark:text-gray-200"
     >
-      <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-20 left-0 blur-3xl opacity-90"></div>
+      <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-10 left-0 blur-3xl opacity-90"></div>
       <div className="w-[150px] h-[150px] rounded-full bg-primary -z-10 absolute bottom-20 right-0 blur-3xl opacity-50"></div>
+      <div className="hidden sm:block sm:w-64 overflow-hidden absolute z-10 bottom-0 left-0 sm:left-10 hover:scale-90 transition-all duration-150">
+        <img className="w-[100%] h-[100%]" src={pranavImage} alt="" />
+      </div>
       <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl p-3 md:p-0">
         <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
           <motion.h1
