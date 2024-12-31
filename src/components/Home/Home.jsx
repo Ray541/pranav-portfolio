@@ -27,7 +27,11 @@ const Home = () => {
         <div className="w-[1px] h-8 bg-gray-400 dark:bg-gray-400"></div>
       </div>
       <div className="hidden sm:block sm:w-64 overflow-hidden absolute z-10 bottom-0 left-0 sm:left-10 hover:scale-90 transition-all duration-150">
-        <img className="w-[100%] h-[100%]" src={pranavImage} alt="" />
+        <img
+          className="w-[100%] h-[100%] backdrop-filter drop-shadow-lg"
+          src={pranavImage}
+          alt=""
+        />
       </div>
       <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl p-3 md:p-0">
         <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
