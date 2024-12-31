@@ -13,8 +13,8 @@ const CursorFollower = () => {
 
     const animate = () => {
       setCurrentPosition(prev => ({
-        x: prev.x + (position.x - prev.x) * 0.2, // Adjustable Shooth Effect
-        y: prev.y + (position.y - prev.y) * 0.2,
+        x: prev.x + (position.x - prev.x) * 0.5, // Adjustable Shooth Effect
+        y: prev.y + (position.y - prev.y) * 0.5,
       }));
       animationFrameId = requestAnimationFrame(animate);
     };
