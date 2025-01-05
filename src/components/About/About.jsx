@@ -142,7 +142,7 @@ const About = () => {
             {SKILLS.map((skill, skillIndex) => (
               <span
                 key={`${skill.name}-${skillIndex}`}
-                className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
+                className="bg-transparent border-2 border-primary hover:border-gray-800 dark:hover:border-gray-200 text-gray-800 dark:text-gray-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
               >
                 {skill.icon} {skill.name}
               </span>
