@@ -1,4 +1,4 @@
-import pranavImage from "../../../public/assets/Pranav-Rao-Portfolio-Name-and-Role-Light.png";
+import pranavImage from "/assets/Name.png";
 import resume from "/assets/Pranav's_Resume.pdf";
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { BiSolidMouse } from "react-icons/bi";
@@ -26,7 +26,7 @@ const Home = () => {
         <BiSolidMouse className="text-xl text-gray-700 dark:text-gray-100" />
         <div className="w-[1px] h-8 bg-gray-400 dark:bg-gray-400"></div>
       </div>
-      <div className="hidden sm:block sm:w-64 overflow-hidden absolute z-10 bottom-0 left-0 sm:left-10 hover:scale-90 transition-all duration-150">
+      <div className="hidden sm:block sm:w-52 overflow-hidden absolute z-10 bottom-3 left-0 sm:left-10 hover:scale-90 transition-all duration-150">
         <img
           className="w-[100%] h-[100%] backdrop-filter drop-shadow-lg"
           src={pranavImage}
