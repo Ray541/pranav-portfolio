@@ -121,7 +121,7 @@ const About = () => {
                   {workingon.technologies.map((tech, techIndex) => (
                     <span
                       key={`${workingon.domain}-${tech.name}-${techIndex}`}
-                      className="bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5 hover:scale-95"
+                      className="font-bold bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5 hover:scale-95"
                     >
                       {tech.icon} {tech.name}
                     </span>
@@ -142,7 +142,7 @@ const About = () => {
             {SKILLS.map((skill, skillIndex) => (
               <span
                 key={`${skill.name}-${skillIndex}`}
-                className="bg-transparent border-2 border-primary hover:border-gray-800 dark:hover:border-gray-200 text-gray-800 dark:text-gray-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
+                className="font-bold bg-transparent border-2 border-primary hover:border-gray-800 dark:hover:border-gray-200 text-gray-800 hover:text-primary dark:text-gray-200 dark:hover:text-primary p-2 rounded-md transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
               >
                 {skill.icon} {skill.name}
               </span>
@@ -154,7 +154,7 @@ const About = () => {
         <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-primary">Contact</h3>
           <button
-            className="bg-gray-700 hover:bg-primary text-white font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
+            className="bg-gray-700 hover:bg-primary text-gray-200 font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
             onClick={handleCopyEmail}
           >
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}{" "}
