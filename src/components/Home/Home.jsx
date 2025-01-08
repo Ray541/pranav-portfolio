@@ -1,4 +1,4 @@
-import pranavImage from "/assets/Name.png";
+import pranavImage from "/assets/Name1.png";
 import resume from "/assets/Pranav's_Resume.pdf";
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { BiSolidMouse } from "react-icons/bi";
@@ -43,7 +43,7 @@ const Home = () => {
         initial={introNameInitial}
         animate={introNameAnimate}
         transition={introNameTransition}
-        className="hidden sm:block sm:w-44 overflow-hidden absolute z-10 bottom-3 left-0 sm:left-10 hover:scale-90 transition-all duration-150"
+        className="hidden sm:block sm:w-48 overflow-hidden absolute z-10 bottom-3 left-0 sm:left-10 hover:scale-90 transition-all duration-150"
       >
         <img
           className="w-[100%] h-[100%] backdrop-filter drop-shadow-lg"
