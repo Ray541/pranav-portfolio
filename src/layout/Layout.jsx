@@ -9,6 +9,7 @@ import Experience from "../components/Experience/Experience";
 // Footer
 import Footer from "../components/Footer/Footer";
 // Components
+import ScrollProgress from "../components/ScrollProgress/ScrollProgress";
 import Mode from "../components/Mode/Mode";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import CursorFollower from "../components/CursorFollower/CursorFollower";
@@ -20,6 +21,7 @@ const Layout = () => {
 
   return (
     <div className="duration-300 overflow-hidden">
+      <ScrollProgress />
       <CursorFollower />
       <Header />
       <main className="w-full h-full">
