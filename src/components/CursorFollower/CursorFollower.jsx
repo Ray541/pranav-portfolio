@@ -72,9 +72,9 @@ const CursorFollower = () => {
     const colorClass = (() => {
       switch (cursorStyle.type) {
         case "hover":
-          return "border-gray-300";
+          return "border-gray-200";
         case "onText":
-          return "border-gray-300";
+          return "border-gray-200";
         default:
           return "bg-gray-200/10 dark:bg-gray-200/10";
       }
