@@ -28,7 +28,7 @@ const CursorFollower = () => {
     type: "default",
     width: "12px",
     height: "12px",
-    className: "bg-gray-200/10 border-gray-500", // Default class
+    className: "", // Default class
   });
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const CursorFollower = () => {
           type: cursorData.type || "default",
           width: cursorData.width || "12px",
           height: cursorData.height || "12px",
-          className: cursorData.className || "bg-gray-200/10 border-gray-500",
+          className: cursorData.className,
         });
       } else {
         // Reset to default if no `data-cursor` is found
@@ -53,7 +53,7 @@ const CursorFollower = () => {
           type: "default",
           width: "12px",
           height: "12px",
-          className: "bg-gray-200/10 border-gray-500",
+          className: "",
         });
       }
     };
