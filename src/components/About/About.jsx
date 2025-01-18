@@ -106,7 +106,7 @@ const About = () => {
         <span className="text-primary">About</span> Me
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Working on */}
         <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
           <h3 className="text-2xl font-black mb-2 text-primary">Working On</h3>

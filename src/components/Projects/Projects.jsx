@@ -48,15 +48,15 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="flex flex-col items-center justify-center gap-5 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
+      className="flex flex-col items-center justify-center gap-5 px-5 py-16 bg-gray-100/50 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
     >
       <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute top-20 right-20 blur-3xl opacity-90"></div>
       <div className="w-[200px] h-[200px] rounded-full bg-primary -z-10 absolute bottom-20 left-0 blur-3xl opacity-50"></div>
-      <div className="w-full h-full flex items-center justify-center flex-col backdrop-filter backdrop-blur-3xl px-5 py-16">
-        <h2 className="text-6xl font-bold mb-5">
-          My <span className="text-primary">Work</span>
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0 xl:px-24">
+      <h2 className="text-6xl font-bold mb-5">
+        My <span className="text-primary">Work</span>
+      </h2>
+      <div className="w-full max-w-7xl h-full flex items-center justify-center flex-col gap-5 backdrop-filter backdrop-blur-3xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0">
           {PROJECTS.map((project, index) => (
             <div
               key={index}

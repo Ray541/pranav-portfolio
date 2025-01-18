@@ -6,17 +6,17 @@ const Contact = () => {
     <>
       <section
         id="contact"
-        className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-12 px-4"
+        className="flex flex-col items-center justify-center gap-5 px-5 py-16 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
       >
+        <h2 className="text-6xl font-bold mb-5 text-center">
+          <span className="text-primary">Contact</span> Me
+        </h2>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-6xl font-bold mb-5 text-center">
-            <span className="text-primary">Contact</span> Me
-          </h2>
           <p className="text-xl mb-5 text-center">
             If you have any questions or want to get in touch, feel free to drop me an email. I
             would love to hear from you!
           </p>
-          <p className="text-3xl mb-8 text-center">Let's Build Together</p>
+          <p className="text-3xl mb-8 text-center font-semibold">Let's Build Together</p>
           <div className="flex justify-center items-center flex-col">
             <a
               href="mailto:pranavrao541@gmail.com"

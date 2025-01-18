@@ -63,13 +63,13 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center justify-center px-5 py-16 gap-5 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
+      className="flex flex-col items-center justify-center gap-5 px-5 py-16 bg-gray-50/10 text-gray-900 dark:bg-gray-900 dark:text-gray-200 relative"
     >
       <div className="w-[500px] h-[500px] bg-primary -z-10 absolute blur-3xl opacity-15"></div>
+      <h2 className="text-6xl font-bold mb-5">
+        My <span className="text-primary">Experience</span>
+      </h2>
       <div className="w-full h-full flex items-center justify-center flex-col backdrop-filter backdrop-blur-3xl p-3">
-        <h2 className="text-6xl font-bold mb-5">
-          My <span className="text-primary">Experience</span>
-        </h2>
         <div className="max-w-5xl mx-auto">
           <p className="text-xl font-normal mb-5 text-center">
             With a passion for crafting exceptional digital experiences, I have honed my skills in
