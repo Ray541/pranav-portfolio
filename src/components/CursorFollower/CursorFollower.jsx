@@ -84,6 +84,8 @@ const CursorFollower = () => {
         transform: "translate(-50%, -50%)",
         width: cursorStyle.width,
         height: cursorStyle.height,
+        transition:
+          "width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease",
       }}
     ></div>
   );
