@@ -1,5 +1,6 @@
+// Components
+import Socials from "../Socials";
 import { FiSend } from "react-icons/fi";
-import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -20,45 +21,11 @@ const Contact = () => {
           <div className="flex justify-center items-center flex-col">
             <a
               href="mailto:pranavrao541@gmail.com"
-              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1 active:scale-95"
+              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1 active:scale-95 mb-5"
             >
               <span>Let's Connect</span> <FiSend className="text-xl" />
             </a>
-
-            <div className="mt-5 flex gap-6 items-center justify-center lg:justify-start">
-              <a
-                href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary"
-              >
-                <SiLinkedin className="text-xl active:scale-95" />
-              </a>
-              <a
-                href="https://github.com/Ray541"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary"
-              >
-                <SiGithub className="text-xl active:scale-95" />
-              </a>
-              <a
-                href="https://www.facebook.com/pranav.rao.338"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary"
-              >
-                <SiFacebook className="text-xl active:scale-95" />
-              </a>
-              <a
-                href="https://www.instagram.com/pranav_rao0504"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary"
-              >
-                <SiInstagram className="text-xl active:scale-95" />
-              </a>
-            </div>
+            <Socials />
           </div>
         </div>
       </section>

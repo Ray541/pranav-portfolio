@@ -1,6 +1,7 @@
 import pranavImage from "/assets/Name1.png";
 import resume from "/assets/Pranav's_Resume.pdf";
-import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+// Components
+import Socials from "../Socials";
 import { BiSolidMouse } from "react-icons/bi";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -84,46 +85,13 @@ const Home = () => {
                 <a
                   href={resume}
                   target="_blank"
-                  className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95"
+                  className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 mb-5"
                 >
                   <MdOutlineFileDownload className="text-xl" />
                   <span className="tracking-wide">Download CV</span>
                 </a>
               </div>
-              <div className="mt-5 flex gap-6 items-center justify-center lg:justify-start">
-                <a
-                  href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-primary active:scale-95"
-                >
-                  <SiLinkedin className="text-xl" />
-                </a>
-                <a
-                  href="https://github.com/Ray541"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-primary active:scale-95"
-                >
-                  <SiGithub className="text-xl" />
-                </a>
-                <a
-                  href="https://www.facebook.com/pranav.rao.338"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-primary active:scale-95"
-                >
-                  <SiFacebook className="text-xl" />
-                </a>
-                <a
-                  href="https://www.instagram.com/pranav_rao0504"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-primary active:scale-95"
-                >
-                  <SiInstagram className="text-xl" />
-                </a>
-              </div>
+              <Socials />
             </motion.div>
           </div>
         </div>

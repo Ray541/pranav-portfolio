@@ -1,4 +1,6 @@
 import { useState } from "react";
+// Components
+import Socials from "../Socials";
 import {
   SiNextdotjs,
   SiRedux,
@@ -17,10 +19,6 @@ import {
   SiC,
   SiCplusplus,
   SiMysql,
-  SiLinkedin,
-  SiGithub,
-  SiFacebook,
-  SiInstagram,
 } from "react-icons/si";
 import { GoCopy } from "react-icons/go";
 import { IoCheckmarkDone } from "react-icons/io5";
@@ -160,40 +158,7 @@ const About = () => {
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}{" "}
             <span className="tracking-wide">{emailCopied ? "Email Copied" : "Copy Email"}</span>
           </button>
-          <div className="flex gap-5 items-center justify-center lg:justify-start">
-            <a
-              href="https://www.linkedin.com/in/pranav-rao-09a79b231/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary text-lg active:scale-95"
-            >
-              <SiLinkedin />
-            </a>
-            <a
-              href="https://github.com/Ray541"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary text-lg active:scale-95"
-            >
-              <SiGithub />
-            </a>
-            <a
-              href="https://www.facebook.com/pranav.rao.338"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary text-lg active:scale-95"
-            >
-              <SiFacebook />
-            </a>
-            <a
-              href="https://www.instagram.com/pranav_rao0504"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary text-lg active:scale-95"
-            >
-              <SiInstagram />
-            </a>
-          </div>
+          <Socials />
         </div>
 
         {/* Education */}
