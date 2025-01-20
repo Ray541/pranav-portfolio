@@ -1,4 +1,4 @@
-import pranavImage from "/assets/Name1.png";
+// import pranavImage from "/assets/Name1.png";
 import resume from "/assets/Pranav's_Resume.pdf";
 // Components
 import Socials from "../Socials";
@@ -15,13 +15,34 @@ const Home = () => {
   const introSubTitleAnimate = { opacity: 1, y: 0 };
   const introSubTitleTransition = { duration: 1, ease: "circInOut" };
 
-  const introNameInitial = { opacity: 0 };
-  const introNameAnimate = { opacity: 1 };
-  const introNameTransition = { duration: 1, ease: "circInOut" };
+  // const introNameInitial = { opacity: 0 };
+  // const introNameAnimate = { opacity: 1 };
+  // const introNameTransition = { duration: 1, ease: "circInOut" };
 
   const introScrollIconInitial = { opacity: 0, top: -100 };
   const introScrollIconAnimate = { opacity: 1, top: 0 };
   const introScrollIconTransition = { duration: 1, ease: "circInOut" };
+
+  const nameHoverCursorType = {
+    type: "hover",
+    width: "100px",
+    height: "100px",
+    className: "border-gray-500 backdrop-blur-none bg-gray-800/10",
+  };
+
+  const roleAndTechHoverCursorType = {
+    type: "hover",
+    width: "50px",
+    height: "50px",
+    className: "border-gray-400 backdrop-blur-none bg-gray-800/10",
+  };
+
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
 
   return (
     <section
@@ -41,7 +62,7 @@ const Home = () => {
           <BiSolidMouse className="text-xl text-gray-700 dark:text-gray-100" />
           <div className="w-[1px] h-8 bg-gray-400 dark:bg-gray-400"></div>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={introNameInitial}
           animate={introNameAnimate}
           transition={introNameTransition}
@@ -52,7 +73,7 @@ const Home = () => {
             src={pranavImage}
             alt=""
           />
-        </motion.div>
+        </motion.div> */}
         <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl p-3 md:p-0">
           <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
             <motion.h1
@@ -62,7 +83,10 @@ const Home = () => {
               className="text-4xl font-semibold text-gray-800 dark:text-gray-200 md:text-6xl lg:text-7xl"
             >
               Hi, I'm{" "}
-              <span className="font-black text-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+              <span
+                className="font-black text-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+                data-cursor={JSON.stringify(nameHoverCursorType)}
+              >
                 Pranav Rao
               </span>
               .
@@ -76,21 +100,30 @@ const Home = () => {
             >
               <p className="text-center text-lg font-semibold mt-1">
                 Passionate{" "}
-                <span className="font-bold text-primary text-xl">Frontend Developer</span> started
-                my carrier in Web Dev. I specialize in using{" "}
-                <span className="font-bold text-primary text-xl">React.js</span> to build modern,
-                dynamic and efficient websites.
-              </p>
-              <div className="flex items-center justify-center lg:block">
-                <a
-                  href={resume}
-                  target="_blank"
-                  className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 mb-5"
+                <span
+                  className="font-bold text-primary text-xl"
+                  data-cursor={JSON.stringify(roleAndTechHoverCursorType)}
                 >
-                  <MdOutlineFileDownload className="text-xl" />
-                  <span className="tracking-wide">Download CV</span>
-                </a>
-              </div>
+                  Frontend Developer
+                </span>{" "}
+                started my carrier in Web Dev. I specialize in using{" "}
+                <span
+                  className="font-bold text-primary text-xl"
+                  data-cursor={JSON.stringify(roleAndTechHoverCursorType)}
+                >
+                  React.js
+                </span>{" "}
+                to build modern, dynamic and efficient websites.
+              </p>
+              <a
+                href={resume}
+                target="_blank"
+                className="bg-gray-700 dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 mb-5"
+                data-cursor={JSON.stringify(buttonHoverCursorType)}
+              >
+                <MdOutlineFileDownload className="text-xl" />
+                <span className="tracking-wide">Download CV</span>
+              </a>
               <Socials />
             </motion.div>
           </div>

@@ -21,6 +21,13 @@ const Mode = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [threshold, setThreshold] = useState(0);
 
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   const toggleMode = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
@@ -66,6 +73,7 @@ const Mode = () => {
         className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 dark:border-gray-200/50 hover:bg-primary dark:hover:bg-primary text-gray-800 hover:text-gray-200 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-150 flex gap-1.5 items-center justify-center font-medium cursor-none active:scale-90 ${
           isVisible ? "pointer-events-auto" : "pointer-events-none"
         }`}
+        data-cursor={JSON.stringify(buttonHoverCursorType)}
       >
         {isDarkMode ? <TiWeatherSunny /> : <BsMoonStars />}
         {/* <span className="hidden lg:block">{isDarkMode ? "Light" : "Dark"}</span> */}

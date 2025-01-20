@@ -79,6 +79,13 @@ const EDUCATION = [
 const About = () => {
   const [emailCopied, setEmailCopied] = useState(false);
 
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   const handleCopyEmail = () => {
     const email = "pranavrao541@gmail.com";
     navigator.clipboard
@@ -154,6 +161,7 @@ const About = () => {
           <button
             className="bg-gray-700 hover:bg-primary text-gray-200 font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
             onClick={handleCopyEmail}
+            data-cursor={JSON.stringify(buttonHoverCursorType)}
           >
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}{" "}
             <span className="tracking-wide">{emailCopied ? "Email Copied" : "Copy Email"}</span>

@@ -8,6 +8,13 @@ const ScrollToTop = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [threshold, setThreshold] = useState(0);
 
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
 
@@ -55,6 +62,7 @@ const ScrollToTop = () => {
         className={`p-2 rounded-full bg-gray-400/10 dark:bg-gray-200/20 border-gray-700/50 dark:border-gray-200/50 hover:bg-primary dark:hover:bg-primary text-gray-800 hover:text-gray-200 dark:text-gray-200 backdrop-blur-sm border drop-shadow-lg transition-all duration-150 cursor-none active:scale-90 ${
           isVisible ? "pointer-events-auto" : "pointer-events-none"
         }`}
+        data-cursor={JSON.stringify(buttonHoverCursorType)}
       >
         <span className="text-md">
           <FiCornerLeftUp />

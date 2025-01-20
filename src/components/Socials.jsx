@@ -1,6 +1,13 @@
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 
 const Socials = () => {
+  const hoverCursorClasses = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   return (
     <div className="flex gap-6 items-center justify-center lg:justify-start">
       <a
@@ -8,7 +15,7 @@ const Socials = () => {
         target="_blank"
         rel="noreferrer"
         className="hover:text-primary active:scale-95"
-        data-cursor='{"type": "hover", "className": "border-gray-200"}'
+        data-cursor={JSON.stringify(hoverCursorClasses)}
       >
         <SiLinkedin className="text-xl" />
       </a>
@@ -17,7 +24,7 @@ const Socials = () => {
         target="_blank"
         rel="noreferrer"
         className="hover:text-primary active:scale-95"
-        data-cursor='{"type": "hover", "className": "border-gray-200"}'
+        data-cursor={JSON.stringify(hoverCursorClasses)}
       >
         <SiGithub className="text-xl" />
       </a>
@@ -26,7 +33,7 @@ const Socials = () => {
         target="_blank"
         rel="noreferrer"
         className="hover:text-primary active:scale-95"
-        data-cursor='{"type": "hover", "className": "border-gray-200"}'
+        data-cursor={JSON.stringify(hoverCursorClasses)}
       >
         <SiFacebook className="text-xl" />
       </a>
@@ -35,7 +42,7 @@ const Socials = () => {
         target="_blank"
         rel="noreferrer"
         className="hover:text-primary active:scale-95"
-        data-cursor='{"type": "hover", "className": "border-gray-200"}'
+        data-cursor={JSON.stringify(hoverCursorClasses)}
       >
         <SiInstagram className="text-xl" />
       </a>

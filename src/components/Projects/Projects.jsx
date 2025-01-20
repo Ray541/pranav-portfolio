@@ -45,6 +45,13 @@ const PROJECTS = [
 ];
 
 const Projects = () => {
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   return (
     <section
       id="project"
@@ -87,7 +94,8 @@ const Projects = () => {
                   href={project.projectLink ? project.projectLink : `#`}
                   target={project.projectLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  data-cursor={JSON.stringify(buttonHoverCursorType)}
                 >
                   View Project
                   <FaUpRightFromSquare className="text-md" />
@@ -96,7 +104,8 @@ const Projects = () => {
                   href={project.projectGitLink ? project.projectGitLink : `#`}
                   target={project.projectGitLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  data-cursor={JSON.stringify(buttonHoverCursorType)}
                 >
                   <FaGithub className="text-lg" />
                   Git Project

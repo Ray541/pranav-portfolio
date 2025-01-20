@@ -3,6 +3,13 @@ import Socials from "../Socials";
 import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
+  const buttonHoverCursorType = {
+    type: "hover",
+    width: "17px",
+    height: "10px",
+    className: "border-gray-200",
+  };
+
   return (
     <>
       <section
@@ -21,7 +28,8 @@ const Contact = () => {
           <div className="flex justify-center items-center flex-col">
             <a
               href="mailto:pranavrao541@gmail.com"
-              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-colors duration-200 ease-in-out font-medium flex items-center justify-center gap-1 active:scale-95 mb-5"
+              className="bg-primary hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1 active:scale-95 mb-5"
+              data-cursor={JSON.stringify(buttonHoverCursorType)}
             >
               <span>Let's Connect</span> <FiSend className="text-xl" />
             </a>
