@@ -74,7 +74,7 @@ const Home = () => {
             alt=""
           />
         </motion.div> */}
-        <div className="w-full h-full flex items-center justify-center backdrop-filter backdrop-blur-3xl p-3 md:p-0">
+        <div className="w-full h-full flex items-center justify-center p-3 md:p-0">
           <div className="flex items-center justify-center flex-col flex-wrap text-center lg:text-start gap-2 sm:gap-1 lg:w-3/4">
             <motion.h1
               initial={introTitleInitial}
