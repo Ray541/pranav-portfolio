@@ -69,7 +69,7 @@ const Experience = () => {
       <h2 className="text-6xl font-bold mb-5">
         My <span className="text-primary">Experience</span>
       </h2>
-      <div className="w-full h-full flex items-center justify-center flex-col backdrop-filter backdrop-blur-3xl p-3">
+      <div className="w-full h-full flex items-center justify-center flex-col backdrop-filter backdrop-blur-3xl">
         <div className="max-w-5xl mx-auto">
           <p className="text-xl font-normal mb-5 text-center">
             With a passion for crafting exceptional digital experiences, I have honed my skills in
@@ -80,7 +80,7 @@ const Experience = () => {
             {EXPERIENCE.map((experience, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg shadow-md bg-transparent md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-1"
+                className="p-4 rounded-xl shadow-md bg-transparent md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-1"
               >
                 <h3 className="text-2xl font-bold">
                   Role: <span className="text-primary">{experience.role}</span>
@@ -88,13 +88,13 @@ const Experience = () => {
                 <p className="text-lg font-semibold">
                   Company: <span className="text-primary">{experience.company}</span>
                 </p>
-                <div className="bg-gray-100/10 dark:bg-gray-900 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-md hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
+                <div className="bg-gray-100/10 dark:bg-gray-900 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-xl hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
                   <h4 className="text-lg font-medium">Tech Stack: </h4>
                   <div className="flex gap-2 items-center justify-center flex-wrap">
                     {experience.tech.map((tech, i) => (
                       <span
                         key={i}
-                        className="font-bold bg-transparent border-2 border-gray-800 dark:border-gray-200 hover:border-primary dark:hover:border-primary text-gray-800 dark:text-gray-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-none flex items-center content-center gap-1.5 hover:scale-95"
+                        className="font-bold bg-transparent border-2 border-gray-800 dark:border-gray-200 hover:border-primary dark:hover:border-primary text-gray-800 dark:text-gray-200 p-2 rounded-sm hover:rounded-md transition-all duration-200 ease-in-out cursor-none flex items-center content-center gap-1.5 hover:scale-95"
                       >
                         {tech.icon} {tech.name}
                       </span>

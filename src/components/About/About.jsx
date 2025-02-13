@@ -113,20 +113,20 @@ const About = () => {
 
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Working on */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
+        <div className="p-4 rounded-xl shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-2 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-3">
           <h3 className="text-2xl font-black mb-2 text-primary">Working On</h3>
           <div className="w-full flex items-center justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {WORKINGON.map((workingon, index) => (
               <div
                 key={`${workingon.domain}-${index}`}
-                className="flex flex-col bg-gray-100/10 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-lg gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="flex flex-col bg-gray-100 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-xl gap-1.5 shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <h1 className="text-lg font-medium dark:text-gray-100">{workingon.domain}</h1>
                 <div className="flex gap-2 items-center justify-center flex-wrap">
                   {workingon.technologies.map((tech, techIndex) => (
                     <span
                       key={`${workingon.domain}-${tech.name}-${techIndex}`}
-                      className="font-bold bg-gray-700 text-gray-100 p-2 rounded-md hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5 hover:scale-95"
+                      className="font-bold bg-gray-700 text-gray-100 p-2 rounded-sm hover:bg-primary transition-all duration-200 ease-in-out cursor-progress flex items-center gap-1.5 hover:scale-95"
                     >
                       {tech.icon} {tech.name}
                     </span>
@@ -141,13 +141,13 @@ const About = () => {
         </div>
 
         {/* Skills */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
+        <div className="p-4 rounded-xl shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-start justify-center flex-col gap-1">
           <h3 className="text-2xl font-black mb-2 text-primary">Skills</h3>
           <div className="flex items-center justify-center flex-wrap gap-3">
             {SKILLS.map((skill, skillIndex) => (
               <span
                 key={`${skill.name}-${skillIndex}`}
-                className="font-bold bg-transparent border-2 border-primary hover:border-gray-800 dark:hover:border-gray-200 text-gray-800 hover:text-primary dark:text-gray-200 dark:hover:text-primary p-2 rounded-md transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
+                className="font-bold bg-transparent border-2 border-primary hover:border-gray-800 dark:hover:border-gray-200 text-gray-800 hover:text-primary dark:text-gray-200 dark:hover:text-primary p-2 rounded-sm hover:rounded-md transition-all duration-200 ease-in-out cursor-crosshair flex items-center gap-1.5 hover:scale-95"
               >
                 {skill.icon} {skill.name}
               </span>
@@ -156,10 +156,10 @@ const About = () => {
         </div>
 
         {/* Info */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
+        <div className="p-4 rounded-xl shadow-md bg-transparent dark:bg-gray-900 md:col-span-1 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex items-center justify-evenly flex-wrap gap-5 sm:justify-around">
           <h3 className="text-2xl font-black text-primary">Contact</h3>
           <button
-            className="bg-gray-700 hover:bg-primary text-gray-200 font-semibold py-2 px-4 rounded transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
+            className="bg-gray-700 hover:bg-primary text-gray-200 font-semibold py-2 px-4 rounded-sm transition-all duration-50 flex items-center justify-center gap-1 shadow-md max-w-fit active:scale-95 cursor-none"
             onClick={handleCopyEmail}
             data-cursor={JSON.stringify(buttonHoverCursorType)}
           >
@@ -170,13 +170,13 @@ const About = () => {
         </div>
 
         {/* Education */}
-        <div className="p-4 rounded-lg shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col gap-3">
+        <div className="p-4 rounded-xl shadow-md bg-transparent dark:bg-gray-900 md:col-span-2 lg:col-span-3 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col gap-3">
           <h3 className="text-2xl font-black mb-2 text-primary">Education</h3>
           <div className="flex items-start justify-center flex-col gap-5 sm:flex-row sm:justify-around">
             {EDUCATION.map((education, index) => (
               <div
                 key={`${education.degree}-${index}`}
-                className="bg-gray-100/10 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 md:p-3 rounded-lg shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
+                className="bg-gray-100/10 dark:bg-gray-800 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 md:p-3 rounded-xl shadow hover:-translate-y-2 transition-all duration-200 ease-in-out"
               >
                 <p className="text-xl text-primary font-semibold flex gap-1">
                   Degree:{" "}

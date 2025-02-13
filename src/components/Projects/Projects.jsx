@@ -67,11 +67,11 @@ const Projects = () => {
           {PROJECTS.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100/10 dark:bg-gray-900 p-5 rounded-lg shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
+              className="bg-gray-100/10 dark:bg-gray-900 p-4 rounded-xl shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
             >
               <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
               <div>
-                <div className="w-full h-[300px] overflow-hidden rounded-md border groupForImage relative">
+                <div className="w-full h-[300px] overflow-hidden rounded-xl border groupForImage relative">
                   <img
                     src={project.projectImage}
                     alt=""
@@ -94,7 +94,7 @@ const Projects = () => {
                   href={project.projectLink ? project.projectLink : `#`}
                   target={project.projectLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded shadow transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded-sm shadow transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
                   data-cursor={JSON.stringify(buttonHoverCursorType)}
                 >
                   View Project
@@ -104,7 +104,7 @@ const Projects = () => {
                   href={project.projectGitLink ? project.projectGitLink : `#`}
                   target={project.projectGitLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-950 transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-gray-600 text-white px-4 py-2 rounded-sm shadow hover:bg-gray-950 transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
                   data-cursor={JSON.stringify(buttonHoverCursorType)}
                 >
                   <FaGithub className="text-lg" />
