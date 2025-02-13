@@ -24,24 +24,22 @@ const Home = () => {
   const introScrollIconTransition = { duration: 1, ease: "circInOut" };
 
   const nameHoverCursorType = {
-    type: "hover",
+    type: "onText",
     width: "100px",
     height: "100px",
-    className: "border-gray-500 backdrop-blur-none bg-gray-800/10",
+    className: "border border-gray-500 dark:border-gray-200 backdrop-blur-none bg-gray-800/10 dark:bg-gray-200/10",
   };
 
   const roleAndTechHoverCursorType = {
-    type: "hover",
+    type: "onText",
     width: "50px",
     height: "50px",
-    className: "border-gray-400 backdrop-blur-none bg-gray-800/10",
+    className: "border border-gray-500 dark:border-gray-200 backdrop-blur-none bg-gray-800/10 dark:bg-gray-200/10",
   };
 
   const buttonHoverCursorType = {
     type: "hover",
-    width: "17px",
-    height: "10px",
-    className: "border-gray-200",
+    className: "border-4 border-gray-200 dark:border-gray-200 backdrop-blur-none",
   };
 
   return (

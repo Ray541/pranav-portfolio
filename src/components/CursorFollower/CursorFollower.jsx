@@ -28,7 +28,7 @@ const CursorFollower = () => {
     type: "default",
     width: "12px",
     height: "12px",
-    className: "border-gray-500 dark:border-gray-200", // Default class
+    className: "border-4 border-gray-800 dark:border-gray-200", // Default class
   });
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const CursorFollower = () => {
           type: cursorData.type || "default",
           width: cursorData.width || "12px",
           height: cursorData.height || "12px",
-          className: cursorData.className || "border-gray-500 dark:border-gray-200",
+          className: cursorData.className || "border-4 border-gray-800 dark:border-gray-200",
         });
       } else {
         // Reset to default if no `data-cursor` is found
@@ -53,7 +53,7 @@ const CursorFollower = () => {
           type: "default",
           width: "12px",
           height: "12px",
-          className: "border-gray-500 dark:border-gray-200",
+          className: "border-4 border-gray-800 dark:border-gray-200",
         });
       }
     };
@@ -77,7 +77,7 @@ const CursorFollower = () => {
 
   return (
     <div
-      className={`hidden lg:block fixed rounded-full z-[999] border dark:border-gray-200 backdrop-blur-[1.5px] pointer-events-none ${cursorStyle.className}`}
+      className={`hidden lg:block fixed rounded-full z-[999] backdrop-blur-[1.5px] pointer-events-none ${cursorStyle.className}`}
       style={{
         top: `${currentPosition.y}px`,
         left: `${currentPosition.x}px`,

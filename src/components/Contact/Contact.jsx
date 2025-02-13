@@ -5,9 +5,7 @@ import { FiSend } from "react-icons/fi";
 const Contact = () => {
   const buttonHoverCursorType = {
     type: "hover",
-    width: "17px",
-    height: "10px",
-    className: "border-gray-200",
+    className: "border-4 border-gray-200 dark:border-gray-200 avtive:border backdrop-blur-none",
   };
 
   return (

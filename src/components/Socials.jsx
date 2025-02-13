@@ -3,9 +3,7 @@ import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 const Socials = () => {
   const hoverCursorClasses = {
     type: "hover",
-    width: "17px",
-    height: "10px",
-    className: "border-gray-200",
+    className: "border-4 backdrop-blur-none border-gray-800/70 dark:border-gray-200/70",
   };
 
   return (
