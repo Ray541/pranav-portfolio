@@ -56,9 +56,9 @@ const Home = () => {
           transition={introScrollIconTransition}
           className="hidden absolute right-10 z-10 lg:flex lg:items-center lg:justify-center lg:flex-col lg:gap-1"
         >
-          <div className="w-[1px] h-5 bg-gray-400 dark:bg-gray-400"></div>
+          <div className="w-[1px] h-5 bg-gray-950 dark:bg-primary"></div>
           <BiSolidMouse className="text-xl text-gray-700 dark:text-gray-100" />
-          <div className="w-[1px] h-8 bg-gray-400 dark:bg-gray-400"></div>
+          <div className="w-[1px] h-8 bg-gray-950 dark:bg-primary"></div>
         </motion.div>
         {/* <motion.div
           initial={introNameInitial}
