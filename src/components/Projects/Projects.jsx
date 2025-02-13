@@ -67,11 +67,11 @@ const Projects = () => {
           {PROJECTS.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100/10 dark:bg-gray-900 p-4 rounded-xl shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
+              className="bg-gray-100/10 dark:bg-gray-900 p-4 rounded-sm shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
             >
               <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
               <div>
-                <div className="w-full h-[300px] overflow-hidden rounded-xl border groupForImage relative">
+                <div className="w-full h-[300px] overflow-hidden rounded-sm border-2 groupForImage relative">
                   <img
                     src={project.projectImage}
                     alt=""
