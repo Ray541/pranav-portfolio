@@ -16,6 +16,7 @@ import {
   SiMysql,
   SiWordpress,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const EXPERIENCE = [
   {
@@ -78,9 +79,10 @@ const Experience = () => {
           </p>
           <div className="grid place-content-center grid-cols-1 md:grid-cols-4 lg:grid-cols-2 gap-8">
             {EXPERIENCE.map((experience, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-4 rounded-sm shadow-md bg-transparent md:col-span-2 lg:col-span-1 hover:scale-105 border-2 border-gray-500 hover:border-primary transition-all duration-200 ease-in-out flex flex-col flex-wrap items-start justify-center gap-1"
+                className="p-4 rounded-sm shadow-md bg-transparent md:col-span-2 lg:col-span-1 border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-start justify-center gap-1"
+                whileHover={{ scale: 1.05 }}
               >
                 <h3 className="text-2xl font-bold">
                   Role: <span className="text-primary">{experience.role}</span>
@@ -88,20 +90,24 @@ const Experience = () => {
                 <p className="text-lg font-semibold">
                   Company: <span className="text-primary">{experience.company}</span>
                 </p>
-                <div className="bg-gray-100/10 dark:bg-gray-900 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-sm hover:-translate-y-2 transition-all duration-200 ease-in-out mt-3">
+                <motion.div
+                  className="bg-gray-100/10 dark:bg-gray-900 border-2 border-gray-800/20 dark:border-gray-200/20 p-2 rounded-sm mt-3"
+                  whileHover={{ translateY: -5 }}
+                >
                   <h4 className="text-lg font-medium">Tech Stack: </h4>
                   <div className="flex gap-2 items-center justify-center flex-wrap">
                     {experience.tech.map((tech, i) => (
-                      <span
+                      <motion.span
                         key={i}
                         className="font-bold bg-transparent border-2 border-gray-800 dark:border-gray-200 hover:border-primary dark:hover:border-primary text-gray-800 dark:text-gray-200 p-2 rounded-sm transition-all duration-200 ease-in-out cursor-none flex items-center content-center gap-1.5 hover:scale-95"
+                        whileHover={{ scale: 0.95 }}
                       >
                         {tech.icon} {tech.name}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import instaCloneProjectImage from "/assets/instacloneproject.jpg";
 import pocProjectImage from "/assets/pocproject.jpg";
 import weatherProjectImage from "/assets/weatherproject.jpg";
 import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
@@ -63,9 +64,10 @@ const Projects = () => {
       <div className="w-full max-w-7xl h-full flex items-center justify-center flex-col gap-5 backdrop-filter backdrop-blur-3xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full sx:p-0">
           {PROJECTS.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-100/10 dark:bg-gray-900 p-4 rounded-sm shadow-md hover:-translate-y-2 transition-all duration-100 ease-in-out border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
+              className="bg-gray-100/10 dark:bg-gray-900 p-4 rounded-sm shadow-md border-2 border-gray-500 hover:border-primary flex flex-col flex-wrap items-center justify-between gap-3"
+              whileHover={{ translateY: -10, shadow: 3 }}
             >
               <p className="w-full text-4xl font-bold text-primary">{project.projectName}</p>
               <div>
@@ -88,28 +90,30 @@ const Projects = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center flex-wrap gap-3 sm:gap-5 mt-5 md:mt-1 lg:mt-0">
-                <a
+                <motion.a
                   href={project.projectLink ? project.projectLink : `#`}
                   target={project.projectLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded-sm shadow transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-primary hover:bg-gray-950 text-white px-4 py-2 rounded-sm shadow font-medium flex items-center justify-center gap-1.5"
                   data-cursor={JSON.stringify(buttonHoverCursorType)}
+                  whileTap={{ scale: 0.95 }}
                 >
                   View Project
                   <FaUpRightFromSquare className="text-md" />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href={project.projectGitLink ? project.projectGitLink : `#`}
                   target={project.projectGitLink ? `_blank` : ``}
                   rel="noreferrer"
-                  className="bg-gray-600 text-white px-4 py-2 rounded-sm shadow hover:bg-gray-950 transition-all duration-200 ease-in-out font-medium flex items-center justify-center gap-1.5 active:scale-95"
+                  className="bg-gray-600 text-white px-4 py-2 rounded-sm shadow hover:bg-gray-950 font-medium flex items-center justify-center gap-1.5 active:scale-95"
                   data-cursor={JSON.stringify(buttonHoverCursorType)}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <FaGithub className="text-lg" />
                   Git Project
-                </a>
+                </motion.a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
