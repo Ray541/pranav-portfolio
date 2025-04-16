@@ -10,7 +10,6 @@ const Section = ({ className, sectionName, children }: SectionProps) => {
       id={sectionName}
       className={`w-full max-w-7xl container bg-background flex items-center justify-center flex-col ${className}`}
     >
-      {sectionName}
       {children}
     </section>
   );
