@@ -114,7 +114,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Space Grotesk", serif;
   }
   body {
