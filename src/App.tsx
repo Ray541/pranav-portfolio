@@ -1,8 +1,13 @@
+import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 
-function App({ children }) {
+type AppProps = {
+  children: ReactNode;
+};
+
+function App({ children }: AppProps) {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="theme">
       {children}
     </ThemeProvider>
   );
