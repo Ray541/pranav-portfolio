@@ -102,13 +102,13 @@ const About = () => {
 
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Working on */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-2">
+        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-2 shadow">
           <h3 className="text-2xl font-semibold text-primary">Currently Working On</h3>
           <div className="flex flex-row items-center justify-center flex-wrap gap-10">
             {WORKINGON.map((category, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-evenly flex-wrap gap-3 border border-border p-2 rounded-lg"
+                className="flex flex-col items-center justify-evenly flex-wrap gap-3 border-2 border-border p-2 rounded-lg"
               >
                 <h4 className="w-full text-start text-lg font-medium">{category.domain}</h4>
                 <div className="flex gap-3 flex-wrap">
@@ -127,13 +127,13 @@ const About = () => {
         </div>
 
         {/* Skills */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-1 lg:col-span-1">
+        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-1 lg:col-span-1 hover:shadow-2xl hover:-translate-y-3 duration-200 transition-all ease-in">
           <h3 className="text-2xl font-semibold text-primary">Skills</h3>
           <div className="flex  items-center justify-center gap-4 flex-wrap">
             {SKILLS.map((skill, skillIndex) => (
               <span
                 key={skillIndex}
-                className="flex items-center gap-2 border border-secondary px-4 py-2 rounded-md text-sm font-medium hover:text-accent-foreground hover:bg-secondary transition-all duration-200 ease-in-out cursor-crosshair"
+                className="flex items-center gap-2 border-2 border-primary px-4 py-2 rounded-md text-sm font-medium hover:text-accent-foreground hover:bg-primary transition-all duration-200 ease-in-out cursor-crosshair"
               >
                 {skill.icon} {skill.name}
               </span>
@@ -142,7 +142,7 @@ const About = () => {
         </div>
 
         {/* Contact */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-row items-center justify-evenly flex-wrap gap-6 md:col-span-1 lg:col-span-3">
+        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-row items-center justify-evenly flex-wrap gap-6 md:col-span-1 lg:col-span-3 shadow">
           <h3 className="text-2xl font-semibold text-primary">Contact</h3>
           <Button variant="default" className="cursor-pointer" onClick={handleCopyEmail}>
             {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}
@@ -152,18 +152,21 @@ const About = () => {
         </div>
 
         {/* Education */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3">
+        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3 shadow">
           <h3 className="text-2xl font-semibold text-primary">Education</h3>
-          <div className="w-full flex items-center justify-center flex-wrap gap-4">
+          <div className="w-full flex items-center justify-center flex-col flex-wrap gap-4">
             {EDUCATION.map((education, index) => (
-              <div key={index} className="flex flex-col gap-2 border border-border p-2 rounded-lg">
-                <p className="text-lg font-semibold">
-                  <p>
+              <div
+                key={index}
+                className="flex flex-col items-start justify-center flex-wrap gap-2 border-2 border-border p-2 rounded-lg"
+              >
+                <p className="text-lg font-semibold flex flex-wrap gap-2">
+                  <span>
                     <span className="text-primary">Degree</span>: {education.degree}
-                  </p>
-                  <p>
+                  </span>
+                  <span>
                     <span className="text-primary">College</span>: {education.college}
-                  </p>
+                  </span>
                 </p>
                 <p className="text-sm">
                   <span className="text-primary">Major:</span> {education.major} |{" "}
