@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Socials from "../../components/Socials/Socials";
+import React, { ReactElement, ReactNode, useState } from "react";
 import {
   SiNextdotjs,
   SiRedux,
@@ -19,161 +18,214 @@ import {
   SiCplusplus,
   SiMysql,
 } from "react-icons/si";
+import { IconBaseProps } from "react-icons";
 import { GoCopy } from "react-icons/go";
 import { IoCheckmarkDone } from "react-icons/io5";
+import Socials from "../../components/Socials/Socials";
 import { Button } from "@/components/ui/button";
 import Section from "../Section/Section";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+
+const withColor = (
+  icon: ReactElement<IconBaseProps>,
+  color: string
+): ReactElement<IconBaseProps> => {
+  return React.cloneElement(icon, { color });
+};
+
+// Data
+const SKILLS = [
+  { name: "React", icon: withColor(<SiReact />, "#61DAFB") },
+  { name: "JavaScript", icon: withColor(<SiJavascript />, "#F7DF1E") },
+  { name: "Tailwind CSS", icon: withColor(<SiTailwindcss />, "#06B6D4") },
+  { name: "Bootstrap", icon: withColor(<SiBootstrap />, "#7952B3") },
+  { name: "CSS 3", icon: withColor(<SiCss3 />, "#264DE4") },
+  { name: "HTML 5", icon: withColor(<SiHtml5 />, "#E44D26") },
+  { name: "Git", icon: withColor(<SiGit />, "#F05032") },
+  {
+    name: "C / C++",
+    icon: withColor(<SiC />, "#A8B9CC"),
+    alternateIcon: withColor(<SiCplusplus />, "#00599C"),
+  },
+  { name: "SQL", icon: withColor(<SiMysql />, "#00758F") },
+];
 
 const WORKINGON = [
   {
     domain: "Frontend",
     technologies: [
-      { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "Redux", icon: <SiRedux /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "TypeScript", icon: withColor(<SiTypescript />, "#3178C6") },
+      { name: "Next.js", icon: withColor(<SiNextdotjs />, "#000000") },
+      { name: "Redux", icon: withColor(<SiRedux />, "#764ABC") },
     ],
   },
   {
     domain: "Backend",
     technologies: [
-      { name: "Node.js", icon: <SiNodedotjs /> },
-      { name: "Express.js", icon: <SiExpress /> },
+      { name: "Node.js", icon: withColor(<SiNodedotjs />, "#339933") },
+      { name: "Express.js", icon: withColor(<SiExpress />, "#000000") },
     ],
   },
   {
     domain: "Database",
     technologies: [
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "PSQL", icon: <SiPostgresql /> },
+      { name: "MongoDB", icon: withColor(<SiMongodb />, "#47A248") },
+      { name: "PostgreSQL", icon: withColor(<SiPostgresql />, "#336791") },
     ],
   },
 ];
 
-const SKILLS = [
-  { name: "React", icon: <SiReact /> },
-  { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-  { name: "Bootstrap", icon: <SiBootstrap /> },
-  { name: "CSS 3", icon: <SiCss3 /> },
-  { name: "HTML 5", icon: <SiHtml5 /> },
-  { name: "Git", icon: <SiGit /> },
-  { name: "C / C++", icon: <SiC />, alternateIcon: <SiCplusplus /> },
-  { name: "SQL", icon: <SiMysql /> },
-];
-
 const EDUCATION = [
   {
-    degree: "Bachelors of Technology [B. Tech]",
-    college: "Sharad Institute of Technology College of Engineering",
-    major: "Computer Science and Engineering",
+    degree: "B.Tech in Computer Science",
+    college: "Sharad Institute of Technology",
+    board: "DBATU - Dr. Babasaheb Ambedkar Technological University",
+    marks: "8.64 CGPA",
     passingout: "2023-24",
   },
   {
-    degree: "Diploma [Computer Science]",
-    college: "Maharashtra State Board of Technical Education",
-    major: "Computer Science and Engineering",
+    degree: "Diploma in Computer Science",
+    college: "Sanjay Bhokare Groups of Institues",
+    board: "MSBTE - Maharashtra State Board of Technical Education",
+    marks: "89.94%",
     passingout: "2020-21",
   },
 ];
+
+// Reusable Components
+type SkillBadgeProps = {
+  name: string;
+  icon: ReactNode;
+};
+const SkillBadge = ({ name, icon }: SkillBadgeProps) => (
+  <span className="flex items-center justify-center gap-2 border p-3 rounded-xl transition cursor-crosshair hover:bg-accent">
+    <span className="text-4xl md:text-6xl">{icon}</span>
+    <span className="text-base md:text-2xl font-black">{name}</span>
+  </span>
+);
+
+type TechCardProps = {
+  domain: string;
+  technologies: { name: string; icon: ReactNode }[];
+};
+const TechCard = ({ domain, technologies }: TechCardProps) => (
+  <div className="flex flex-col gap-3 p-3 border rounded-xl bg-background shadow-md hover:shadow-lg transition-all duration-200">
+    <h4 className="text-xl font-bold text-primary border-b border-border border-dashed">
+      {domain}
+    </h4>
+    <div className="flex items-center justify-center gap-3 flex-wrap">
+      {technologies.map((tech, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center gap-2 flex-wrap bg-background border rounded-lg px-3 py-2 text-sm cursor-progress transition-all duration-150"
+        >
+          <span className="text-xl">{tech.icon}</span>
+          <span className="font-semibold">{tech.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+type EducationCardProps = {
+  degree: string;
+  college: string;
+  board: string;
+  marks: string;
+  passingout: string;
+};
+const EducationCard = ({ degree, college, board, marks, passingout }: EducationCardProps) => (
+  <div className="flex flex-col gap-1 p-5 border rounded-xl bg-background shadow-sm">
+    <p className="text-2xl font-black text-primary border-b border-border border-dashed">
+      {degree}
+    </p>
+    <p className="text-md font-medium text-muted-foreground">{college}</p>
+    <p className="text-md font-medium text-muted-foreground">
+      <span className="text-primary font-medium">Board:</span> {board}
+    </p>
+    <p className="text-md font-normal text-muted-foreground">
+      <span className="text-primary font-medium">Marks:</span> {marks}
+    </p>
+    <p className="text-md font-normal">
+      <span className="text-primary font-medium">Passing Year:</span> {passingout}
+    </p>
+  </div>
+);
 
 const About = () => {
   const [emailCopied, setEmailCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    const email = "pranavrao541@gmail.com";
-    navigator.clipboard
-      .writeText(email)
-      .then(() => {
-        setEmailCopied(true);
-        setTimeout(() => {
-          setEmailCopied(false);
-        }, 3000);
-      })
-      .catch(err => {
-        console.error("Failed to copy email: ", err);
-      });
+    navigator.clipboard.writeText("pranavrao541@gmail.com").then(() => {
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 3000);
+    });
   };
 
   return (
     <Section sectionName="about" className="py-20 px-3">
-      <h2 className="text-5xl font-bold mb-8 text-center text-primary">
-        <span className="text-muted-foreground">About</span> Me
+      <h2 className="text-6xl font-bold text-center mb-10">
+        <span className="text-muted">About</span> Me
       </h2>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Working on */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-2 shadow">
-          <h3 className="text-2xl font-semibold text-primary">Currently Working On</h3>
-          <div className="flex flex-row items-center justify-center flex-wrap gap-10">
-            {WORKINGON.map((category, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-evenly flex-wrap gap-3 border-2 border-border p-2 rounded-lg"
-              >
-                <h4 className="w-full text-start text-lg font-medium">{category.domain}</h4>
-                <div className="flex gap-3 flex-wrap">
-                  {category.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="flex items-center gap-2 bg-secondary px-4 py-2 rounded-md font-medium text-sm hover:bg-primary hover:text-background transition-all duration-200 ease-in-out cursor-progress"
-                    >
-                      {tech.icon} {tech.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
+      <div className="flex flex-col items-center justify-center gap-10">
+        <div className="flex items-center justify-center flex-wrap gap-3">
+          {SKILLS.map((skill, idx) => (
+            <SkillBadge key={idx} icon={skill.icon} name={skill.name} />
+          ))}
+        </div>
+
+        <div className="flex flex-col items-start justify-center">
+          <h3 className="text-2xl font-black text-primary mb-4">Currently Working On</h3>
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            {WORKINGON.map((group, idx) => (
+              <TechCard key={idx} domain={group.domain} technologies={group.technologies} />
             ))}
           </div>
         </div>
 
-        {/* Skills */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-1 lg:col-span-1 hover:shadow-2xl hover:-translate-y-3 duration-200 transition-all ease-in">
-          <h3 className="text-2xl font-semibold text-primary">Skills</h3>
-          <div className="flex  items-center justify-center gap-4 flex-wrap">
-            {SKILLS.map((skill, skillIndex) => (
-              <span
-                key={skillIndex}
-                className="flex items-center gap-2 border-2 border-primary px-4 py-2 rounded-md text-sm font-medium hover:text-accent-foreground hover:bg-primary transition-all duration-200 ease-in-out cursor-crosshair"
-              >
-                {skill.icon} {skill.name}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-row items-center justify-evenly flex-wrap gap-6 md:col-span-1 lg:col-span-3 shadow">
-          <h3 className="text-2xl font-semibold text-primary">Contact</h3>
-          <Button variant="default" className="cursor-pointer" onClick={handleCopyEmail}>
-            {emailCopied ? <IoCheckmarkDone className="text-xl" /> : <GoCopy className="text-xl" />}
-            <span className="tracking-wide">{emailCopied ? "Email Copied" : "Copy Email"}</span>
-          </Button>
-          <Socials />
-        </div>
-
-        {/* Education */}
-        <div className="p-5 rounded-xl border-2 border-border hover:border-primary bg-background flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3 shadow">
+        <div className="w-full md:w-3/4 flex flex-col">
           <h3 className="text-2xl font-semibold text-primary">Education</h3>
-          <div className="w-full flex items-center justify-center flex-col flex-wrap gap-4">
-            {EDUCATION.map((education, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-start justify-center flex-wrap gap-2 border-2 border-border p-2 rounded-lg"
-              >
-                <p className="text-lg font-semibold flex flex-wrap gap-2">
-                  <span>
-                    <span className="text-primary">Degree</span>: {education.degree}
-                  </span>
-                  <span>
-                    <span className="text-primary">College</span>: {education.college}
-                  </span>
-                </p>
-                <p className="text-sm">
-                  <span className="text-primary">Major:</span> {education.major} |{" "}
-                  <span className="text-primary">Passing Year:</span> {education.passingout}
-                </p>
-              </div>
+
+          <Tabs defaultValue={EDUCATION[0].degree.toLowerCase().split(" ")[0]} className="w-full">
+            <TabsList className="flex flex-wrap justify-center gap-2 md:grid md:grid-cols-2 w-full rounded-lg">
+              {EDUCATION.map((edu, idx) => (
+                <TabsTrigger
+                  key={idx}
+                  value={edu.degree.toLowerCase().split(" ")[0]}
+                  className="data-[state=active]:bg-primary data-[state=active]:text-white capitalize"
+                >
+                  {edu.degree.split(" ")[0]}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {EDUCATION.map((edu, idx) => (
+              <TabsContent key={idx} value={edu.degree.toLowerCase().split(" ")[0]}>
+                <EducationCard
+                  degree={edu.degree}
+                  college={edu.college}
+                  board={edu.board}
+                  marks={edu.marks}
+                  passingout={edu.passingout}
+                />
+              </TabsContent>
             ))}
+          </Tabs>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 border p-1 md:p-5 rounded-lg bg-background shadow w-full">
+          <h3 className="text-xl text-foreground font-semibold">Get in Touch</h3>
+          <div className="flex flex-col md:flex-row items-center gap-5">
+            <Button
+              onClick={handleCopyEmail}
+              variant="outline"
+              className="flex items-center gap-2 active:scale-95"
+            >
+              {emailCopied ? <IoCheckmarkDone /> : <GoCopy />}
+              {emailCopied ? "Email Copied" : "Copy Email"}
+            </Button>
+            <Socials />
           </div>
         </div>
       </div>
