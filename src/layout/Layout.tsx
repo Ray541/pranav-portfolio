@@ -3,6 +3,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Main } from "./Main/Main";
 import Home from "@/components/Home/Home";
 import About from "@/components/About/About";
+import Projects from "@/components/Projects/Projects";
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
       <Main>
         <Home />
         <About />
+        <Projects />
       </Main>
     </>
   );
