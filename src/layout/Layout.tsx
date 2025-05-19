@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <ModeToggle className="fixed bottom-10 right-10 rounded-full" />
+      <ModeToggle className="fixed bottom-7 right-7 active:scale-90 cursor-pointer" />
       <Main>
         <Home />
         <About />
