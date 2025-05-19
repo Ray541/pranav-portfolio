@@ -1,4 +1,6 @@
 import Section from "../Section/Section";
+import { HiExternalLink } from "react-icons/hi";
+import { RxLink2 } from "react-icons/rx";
 import { Button } from "../ui/button";
 
 const PROJECTS = [
@@ -57,7 +59,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Project
+                View Project <HiExternalLink />
               </a>
             </Button>
 
@@ -72,7 +74,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Repo
+                View Repo <RxLink2 />
               </a>
             </Button>
 
