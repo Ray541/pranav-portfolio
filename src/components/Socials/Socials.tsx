@@ -1,7 +1,11 @@
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 
-const Socials = () => {
+type SocialsProps = {
+  direction?: string;
+};
+
+const Socials = ({ direction }: SocialsProps) => {
   const socials = [
     {
       href: "https://www.linkedin.com/in/pranav-rao-09a79b231/",
@@ -26,14 +30,14 @@ const Socials = () => {
   ];
 
   return (
-    <div className="flex gap-3 items-center justify-center lg:justify-start">
+    <div className={`flex flex-${direction} gap-3 items-center justify-center lg:justify-start`}>
       {socials.map((social, index) => (
         <Button
           asChild
           key={index}
           variant="link"
           size="icon"
-          className="text-xl text-foreground hover:text-primary transition-transform duration-150 active:scale-95"
+          className="text-xl text-foreground hover:text-secondary transition-all duration-150 active:scale-95"
         >
           <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
             {social.icon}
