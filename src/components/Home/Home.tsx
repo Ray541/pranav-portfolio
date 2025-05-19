@@ -33,8 +33,12 @@ const Home = () => {
               </a>
             </Button>
 
-            <div className="absolute right-5 top-1/2 transform -translate-y-1/2 z-50">
+            <div className="hidden lg:flex absolute right-5 top-1/2 transform -translate-y-1/2 z-50 flex-col items-center before:content-[''] before:w-px before:h-30 before:bg-border after:content-[''] after:w-px after:h-30 after:bg-border">
               <Socials direction="col" />
+            </div>
+
+            <div className="block lg:hidden">
+              <Socials direction="row" />
             </div>
           </div>
         </div>
