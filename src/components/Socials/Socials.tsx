@@ -37,7 +37,7 @@ const Socials = ({ direction }: SocialsProps) => {
           key={index}
           variant="link"
           size="icon"
-          className="text-xl text-foreground hover:text-secondary transition-all duration-150 active:scale-95"
+          className="text-xl text-foreground hover:text-secondary active:text-secondary focus:text-secondarytransition-all duration-150 active:scale-95"
         >
           <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
             {social.icon}

@@ -9,8 +9,16 @@ import Experience from "@/components/Experience/Experience";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import Preloader from "@/components/Preloader/Preloader";
+import { useState } from "react";
 
 const Layout = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  if (!isLoaded) {
+    return <Preloader onComplete={() => setIsLoaded(true)} />;
+  }
+
   return (
     <>
       <Header />

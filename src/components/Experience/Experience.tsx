@@ -82,7 +82,7 @@ const ExperienceCard = ({ role, company, tech }: ExperienceCardProps) => (
       {tech.map((item, idx) => (
         <span
           key={idx}
-          className="flex items-center gap-2 border px-3 py-2 rounded-md text-sm font-medium hover:bg-accent transition-all"
+          className="flex items-center gap-2 border px-3 py-2 rounded-md text-sm font-medium hover:bg-accent active:bg-accent/70 focus:bg-accent/70 transition-all"
         >
           <span className="text-xl">{item.icon}</span>
           {item.name}
