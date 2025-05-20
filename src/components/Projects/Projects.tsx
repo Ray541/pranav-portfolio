@@ -7,14 +7,14 @@ const PROJECTS = [
   {
     projectName: "Pollify",
     projectDesc: "Create, vote & manage polls.",
-    projectTechnologies: "React + Tailwind CSS + Firebase",
+    projectTechnologies: "React + Firebase",
     projectLink: "https://pollify-sable.vercel.app/",
     projectGitLink: "https://github.com/Ray541/pollify",
   },
   {
     projectName: "Weather App",
     projectDesc: "Weather search via OpenWeatherMap API.",
-    projectTechnologies: "HTML + CSS + JS + Bootstrap",
+    projectTechnologies: "JS + Bootstrap",
     projectLink: "https://weather-app-seven-zeta-88.vercel.app/",
     projectGitLink: "https://github.com/Ray541/weather-app",
   },
@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     projectName: "Instagram Clone",
     projectDesc: "Clone with account features.",
-    projectTechnologies: "React + Chakra UI + Firebase",
+    projectTechnologies: "React + Firebase",
     projectLink: "https://social-app-clone-jade-kappa.vercel.app/",
     projectGitLink: "https://github.com/Ray541/instagram-clone",
   },

@@ -98,7 +98,7 @@ type SkillBadgeProps = {
   icon: ReactNode;
 };
 const SkillBadge = ({ name, icon }: SkillBadgeProps) => (
-  <span className="flex items-center justify-center gap-2 border p-3 rounded-xl transition cursor-crosshair hover:bg-accent">
+  <span className="flex items-center justify-center gap-2 border p-3 rounded-xl transition cursor-crosshair hover:bg-accent active:bg-accent/70 focus:bg-accent/70">
     <span className="text-4xl md:text-6xl">{icon}</span>
     <span className="text-base md:text-2xl font-black">{name}</span>
   </span>
@@ -117,7 +117,7 @@ const TechCard = ({ domain, technologies }: TechCardProps) => (
       {technologies.map((tech, index) => (
         <div
           key={index}
-          className="flex items-center justify-center gap-2 flex-wrap bg-background border rounded-lg px-3 py-2 text-sm cursor-progress transition-all duration-150"
+          className="flex items-center justify-center gap-2 flex-wrap bg-accent border rounded-lg px-3 py-2 text-sm cursor-progress transition-all duration-150"
         >
           <span className="text-xl">{tech.icon}</span>
           <span className="font-semibold">{tech.name}</span>
