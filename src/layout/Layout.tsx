@@ -4,6 +4,7 @@ import { Main } from "./Main/Main";
 import Home from "@/components/Home/Home";
 import About from "@/components/About/About";
 import Projects from "@/components/Projects/Projects";
+import LittleInfo from "@/components/LittleInfo/LittleInfo";
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
         <Home />
         <About />
         <Projects />
+        <LittleInfo />
       </Main>
     </>
   );
