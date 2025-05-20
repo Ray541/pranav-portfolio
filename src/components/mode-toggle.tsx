@@ -17,7 +17,7 @@ export function ModeToggle({ className }: ModeToggleProps) {
 
   return (
     <>
-      <Button variant="ghost" size="icon" className={className} onClick={toggleTheme}>
+      <Button variant="default" size="icon" className={className} onClick={toggleTheme}>
         {theme === "dark" ? <Sun className="" /> : <Moon className="" />}
       </Button>
     </>
