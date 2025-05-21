@@ -40,7 +40,7 @@ const Footer = () => {
     <footer className="bg-background py-7 px-3 text-center text-muted-foreground border-t border-border border-dashed">
       <div className="flex flex-col md:flex-row gap-2 justify-between items-center max-w-5xl mx-auto">
         <p className="text-sm font-medium flex items-center gap-1 tracking-wide">
-          Developed by <span className="text-lg text-primary font-black">{AUTHOR_NAME}</span>❤️
+          Developed by <span className="text-lg text-primary font-black">{AUTHOR_NAME}</span>😌
         </p>
 
         <DigitalClock time={time} />
