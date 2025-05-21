@@ -11,6 +11,7 @@ import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import Preloader from "@/components/Preloader/Preloader";
 import { useState } from "react";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const Layout = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,8 +22,9 @@ const Layout = () => {
 
   return (
     <>
+      <CustomCursor />
       <Header />
-      <ModeToggle className="fixed bottom-3 right-7 active:scale-90 cursor-pointer z-10" />
+      <ModeToggle className="fixed bottom-3 right-7 active:scale-90 z-5" />
       <Main>
         <Home />
         <About />
@@ -32,7 +34,7 @@ const Layout = () => {
         <Contact />
       </Main>
       <Footer />
-      <ScrollToTop className="fixed bottom-14 right-7 active:scale-90 cursor-pointer z-10" />
+      <ScrollToTop className="fixed bottom-14 right-7 active:scale-90 z-5" />
     </>
   );
 };
