@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { MdArrowUpward } from "react-icons/md";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
 
 type ScrollToTopProps = {
   className?: string;
@@ -50,14 +51,10 @@ const ScrollToTop = ({ className }: ScrollToTopProps) => {
       ref={buttonRef}
       variant="default"
       size="icon"
-      className={`opacity-0 pointer-events-none transition-all ${className}`}
+      className={`opacity-0 pointer-events-none ${className}`}
       onClick={scrollToTop}
-      onMouseEnter={() => {
-        gsap.to("#cursor", { scale: 2, duration: 0.3 });
-      }}
-      onMouseLeave={() => {
-        gsap.to("#cursor", { scale: 1, duration: 0.3 });
-      }}
+      onMouseEnter={() => handleCursorEnter(2)}
+      onMouseLeave={handleCursorLeave}
     >
       <MdArrowUpward />
     </Button>
