@@ -6,6 +6,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import Socials from "../Socials/Socials";
 import resume from "../../assets/Pranav's_Resume.pdf";
 import { Button } from "@/components/ui/button";
+import { handleCursorEnter, handleCursorLeave } from "../../utils/gsapUtils";
 
 const Home = () => {
   const headlineRef = useRef(null);
@@ -25,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Section sectionName="home" className="h-dvh">
+    <Section sectionName="home" className="h-screen lg:h-dvh">
       <div className="w-full h-full flex items-center justify-center p-3 md:p-0">
         <div className="flex flex-col items-center justify-center text-center lg:text-start gap-4 sm:gap-2 lg:w-3/4">
           <h1
@@ -33,7 +34,11 @@ const Home = () => {
             ref={headlineRef}
           >
             Hi, I'm{" "}
-            <span className="font-black text-muted text-5xl sm:text-6xl md:text-7xl lg:text-8xl hover:text-secondary hover:cursor-none">
+            <span
+              className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+              onMouseEnter={() => handleCursorEnter(12)}
+              onMouseLeave={handleCursorLeave}
+            >
               Pranav Rao
             </span>
             .
@@ -45,13 +50,32 @@ const Home = () => {
               ref={paragraphRef}
             >
               Passionate{" "}
-              <span className="font-black text-secondary tracking-wide">Frontend Developer</span>{" "}
+              <span
+                className="font-black text-secondary tracking-wide"
+                onMouseEnter={() => handleCursorEnter(2.5)}
+                onMouseLeave={handleCursorLeave}
+              >
+                Frontend Developer
+              </span>{" "}
               started my career in Web Dev. I specialize in using{" "}
-              <span className="font-black text-secondary tracking-wide">React.js</span> to build
-              modern, dynamic and efficient websites.
+              <span
+                className="font-black text-secondary tracking-wide"
+                onMouseEnter={() => handleCursorEnter(2.5)}
+                onMouseLeave={handleCursorLeave}
+              >
+                React.js
+              </span>{" "}
+              to build modern, dynamic and efficient websites.
             </p>
 
-            <Button asChild variant="default" className="gap-2 mt-2 opacity-0" ref={buttonRef}>
+            <Button
+              asChild
+              variant="default"
+              className="gap-2 mt-2 opacity-0"
+              ref={buttonRef}
+              onMouseEnter={() => handleCursorEnter(2)}
+              onMouseLeave={handleCursorLeave}
+            >
               <a href={resume} target="_blank" rel="noopener noreferrer">
                 <MdOutlineFileDownload className="text-xl" />
                 <span>Download CV</span>
@@ -59,7 +83,7 @@ const Home = () => {
             </Button>
 
             <div
-              className="hidden lg:flex absolute right-5 top-1/2 transform -translate-y-1/2 z-40 flex-col items-center before:content-[''] before:w-px before:h-30 before:bg-border after:content-[''] after:w-px after:h-30 after:bg-border"
+              className="hidden lg:flex absolute right-5 top-1/2 transform -translate-y-1/2 z-5 flex-col items-center before:content-[''] before:w-px before:h-30 before:bg-border after:content-[''] after:w-px after:h-30 after:bg-border"
               ref={socialsRef}
             >
               <Socials direction="col" />

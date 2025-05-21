@@ -1,5 +1,6 @@
 import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
 import { Button } from "@/components/ui/button";
+import { handleCursorEnter, handleCursorLeave } from "../../utils/gsapUtils";
 
 type SocialsProps = {
   direction?: string;
@@ -37,7 +38,9 @@ const Socials = ({ direction }: SocialsProps) => {
           key={index}
           variant="link"
           size="icon"
-          className="text-xl text-foreground hover:text-secondary active:text-secondary focus:text-secondarytransition-all duration-150 active:scale-95"
+          className="text-xl transition-all duration-150 active:scale-95"
+          onMouseEnter={() => handleCursorEnter(2.5)}
+          onMouseLeave={handleCursorLeave}
         >
           <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
             {social.icon}

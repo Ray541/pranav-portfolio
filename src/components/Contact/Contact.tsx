@@ -2,6 +2,7 @@ import Section from "../Section/Section";
 import Socials from "../Socials/Socials";
 import { Button } from "../ui/button";
 import { SiMinutemailer } from "react-icons/si";
+import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
 
 const Contact = () => {
   return (
@@ -17,7 +18,12 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col items-center justify-center mt-5">
-          <Button variant="default" asChild>
+          <Button
+            variant="default"
+            asChild
+            onMouseEnter={() => handleCursorEnter(2)}
+            onMouseLeave={handleCursorLeave}
+          >
             <a href="mailto:pranavrao541@gmail.com" className="mb-5">
               Let's Connect
               <SiMinutemailer />

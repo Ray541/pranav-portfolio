@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
 
 const AUTHOR_NAME = "Pranav";
 const CURRENT_YEAR = new Date().getFullYear();
@@ -31,7 +32,13 @@ const Footer = () => {
         <div className="bg-foreground text-background font-black py-1 px-3 rounded-lg tracking-widest">
           {timeString}
         </div>
-        <div className="text-sm text-muted-foreground font-bold">{dateString}</div>
+        <div
+          className="text-sm text-muted-foreground font-bold"
+          onMouseEnter={() => handleCursorEnter(2)}
+          onMouseLeave={handleCursorLeave}
+        >
+          {dateString}
+        </div>
       </div>
     );
   };
@@ -40,12 +47,24 @@ const Footer = () => {
     <footer className="bg-background py-7 px-3 text-center text-muted-foreground border-t border-border border-dashed">
       <div className="flex flex-col md:flex-row gap-2 justify-between items-center max-w-5xl mx-auto">
         <p className="text-sm font-medium flex items-center gap-1 tracking-wide">
-          Developed by <span className="text-lg text-primary font-black">{AUTHOR_NAME}</span>😌
+          Developed by{" "}
+          <span
+            className="text-lg text-primary font-black"
+            onMouseEnter={() => handleCursorEnter(2)}
+            onMouseLeave={handleCursorLeave}
+          >
+            {AUTHOR_NAME}
+            😌
+          </span>
         </p>
 
         <DigitalClock time={time} />
 
-        <p className="text-md font-black">
+        <p
+          className="text-md font-black"
+          onMouseEnter={() => handleCursorEnter(2.5)}
+          onMouseLeave={handleCursorLeave}
+        >
           &copy; <span className="text-primary">{CURRENT_YEAR}</span>
         </p>
       </div>

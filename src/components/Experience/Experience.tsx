@@ -19,6 +19,7 @@ import {
 } from "react-icons/si";
 import { IconBaseProps } from "react-icons";
 import Section from "../Section/Section";
+import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
 
 // Helper to apply color
 const withColor = (icon: React.ReactElement<IconBaseProps>, color: string) =>
@@ -75,14 +76,22 @@ type ExperienceCardProps = {
   tech: { icon: ReactNode; name: string }[];
 };
 const ExperienceCard = ({ role, company, tech }: ExperienceCardProps) => (
-  <div className="flex flex-col gap-3 p-5 border rounded-xl bg-background shadow-md hover:shadow-lg transition-all duration-200 w-full md:w-[45%]">
-    <h3 className="text-xl font-black text-primary border-b border-border border-dashed">{role}</h3>
+  <div className="flex flex-col items-start justify-center gap-3 p-5 border rounded-xl bg-background shadow-md hover:shadow-lg transition-all duration-200 w-full md:w-[45%]">
+    <h3
+      className="text-xl font-black text-primary border-b border-border border-dashed"
+      onMouseEnter={() => handleCursorEnter(3)}
+      onMouseLeave={handleCursorLeave}
+    >
+      {role}
+    </h3>
     <p className="text-md font-medium text-muted-foreground">{company}</p>
     <div className="flex items-center justify-center md:justify-start flex-wrap gap-2">
       {tech.map((item, idx) => (
         <span
           key={idx}
-          className="flex items-center gap-2 border px-3 py-2 rounded-md text-sm font-medium hover:bg-accent active:bg-accent/70 focus:bg-accent/70 transition-all"
+          className="flex items-center gap-2 border px-3 py-2 rounded-md text-sm font-medium hover:bg-accent active:bg-accent/70 focus:bg-accent/70 transition-all hover:-translate-y-0.5"
+          onMouseEnter={() => handleCursorEnter(2)}
+          onMouseLeave={handleCursorLeave}
         >
           <span className="text-xl">{item.icon}</span>
           {item.name}

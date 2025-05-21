@@ -25,6 +25,7 @@ import Socials from "../../components/Socials/Socials";
 import { Button } from "@/components/ui/button";
 import Section from "../Section/Section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import { handleCursorEnter, handleCursorLeave } from "../../utils/gsapUtils";
 
 const withColor = (
   icon: ReactElement<IconBaseProps>,
@@ -98,7 +99,11 @@ type SkillBadgeProps = {
   icon: ReactNode;
 };
 const SkillBadge = ({ name, icon }: SkillBadgeProps) => (
-  <span className="flex items-center justify-center gap-2 border p-3 rounded-xl transition cursor-crosshair hover:bg-accent active:bg-accent/70 focus:bg-accent/70">
+  <span
+    className="flex items-center justify-center gap-2 border p-3 rounded-xl bg-accent/30"
+    onMouseEnter={() => handleCursorEnter(5)}
+    onMouseLeave={handleCursorLeave}
+  >
     <span className="text-4xl md:text-6xl">{icon}</span>
     <span className="text-base md:text-2xl font-black">{name}</span>
   </span>
@@ -117,7 +122,9 @@ const TechCard = ({ domain, technologies }: TechCardProps) => (
       {technologies.map((tech, index) => (
         <div
           key={index}
-          className="flex items-center justify-center gap-2 flex-wrap bg-accent border rounded-lg px-3 py-2 text-sm cursor-progress transition-all duration-150"
+          className="flex items-center justify-center gap-2 flex-wrap bg-accent/30 border rounded-lg px-3 py-2 text-sm transition-all duration-150 hover:-translate-y-0.5 focus:-translate-y-0.5 active:-translate-y-0.5"
+          onMouseEnter={() => handleCursorEnter(2)}
+          onMouseLeave={handleCursorLeave}
         >
           <span className="text-xl">{tech.icon}</span>
           <span className="font-semibold">{tech.name}</span>
@@ -135,8 +142,12 @@ type EducationCardProps = {
   passingout: string;
 };
 const EducationCard = ({ degree, college, board, marks, passingout }: EducationCardProps) => (
-  <div className="flex flex-col gap-1 p-5 border rounded-xl bg-background shadow-sm">
-    <p className="text-2xl font-black text-primary border-b border-border border-dashed">
+  <div className="flex flex-col items-start justify-center gap-1 p-5 border rounded-xl bg-background shadow-sm">
+    <p
+      className="text-2xl font-black text-primary border-b border-border border-dashed"
+      onMouseEnter={() => handleCursorEnter(3)}
+      onMouseLeave={handleCursorLeave}
+    >
       {degree}
     </p>
     <p className="text-md font-medium text-muted-foreground">{college}</p>
@@ -175,7 +186,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="flex flex-col items-start justify-center">
+        <div className="w-full md:w-3/4 flex flex-col items-start justify-center">
           <h3 className="text-2xl font-black text-primary mb-4">Currently Working On</h3>
           <div className="flex flex-wrap items-center justify-center gap-5">
             {WORKINGON.map((group, idx) => (
@@ -194,6 +205,8 @@ const About = () => {
                   key={idx}
                   value={edu.degree.toLowerCase().split(" ")[0]}
                   className="data-[state=active]:bg-primary data-[state=active]:text-white capitalize"
+                  onMouseEnter={() => handleCursorEnter(1.5)}
+                  onMouseLeave={handleCursorLeave}
                 >
                   {edu.degree.split(" ")[0]}
                 </TabsTrigger>
@@ -221,6 +234,8 @@ const About = () => {
               onClick={handleCopyEmail}
               variant="outline"
               className="flex items-center gap-2 active:scale-95"
+              onMouseEnter={() => handleCursorEnter(2)}
+              onMouseLeave={handleCursorLeave}
             >
               {emailCopied ? <IoCheckmarkDone /> : <GoCopy />}
               {emailCopied ? "Email Copied" : "Copy Email"}

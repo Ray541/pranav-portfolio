@@ -52,6 +52,12 @@ const ScrollToTop = ({ className }: ScrollToTopProps) => {
       size="icon"
       className={`opacity-0 pointer-events-none transition-all ${className}`}
       onClick={scrollToTop}
+      onMouseEnter={() => {
+        gsap.to("#cursor", { scale: 2, duration: 0.3 });
+      }}
+      onMouseLeave={() => {
+        gsap.to("#cursor", { scale: 1, duration: 0.3 });
+      }}
     >
       <MdArrowUpward />
     </Button>

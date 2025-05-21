@@ -3,6 +3,7 @@ import { HiExternalLink } from "react-icons/hi";
 import { RxLink2 } from "react-icons/rx";
 import { Button } from "../ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../ui/accordion";
+import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
 
 const PROJECTS = [
   {
@@ -73,7 +74,11 @@ const Projects = () => {
       <Accordion type="single" collapsible className="w-full space-y-5">
         {PROJECTS.map((project, index) => (
           <AccordionItem key={index} value={`item-${index}`} className="overflow-hidden">
-            <AccordionTrigger className="text-2xl font-black rounded-none px-4 py-3 hover:bg-accent active:bg-accent focus:bg-accent">
+            <AccordionTrigger
+              className="text-2xl font-black rounded-none px-4 py-3 hover:bg-accent active:bg-accent focus:bg-accent"
+              onMouseEnter={() => handleCursorEnter(3.5)}
+              onMouseLeave={handleCursorLeave}
+            >
               {project.projectName}
             </AccordionTrigger>
             <AccordionContent className="bg-muted/10 px-5 py-4 space-y-3">
@@ -92,13 +97,25 @@ const Projects = () => {
               </div>
 
               <div className="flex gap-4 mt-2">
-                <Button asChild variant="ghost" className="text-sm">
+                <Button
+                  asChild
+                  variant="default"
+                  className="text-sm"
+                  onMouseEnter={() => handleCursorEnter(2)}
+                  onMouseLeave={handleCursorLeave}
+                >
                   <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
                     View Project <HiExternalLink className="ml-1 inline" />
                   </a>
                 </Button>
 
-                <Button asChild variant="link" className="text-sm">
+                <Button
+                  asChild
+                  variant="link"
+                  className="text-sm"
+                  onMouseEnter={() => handleCursorEnter(3)}
+                  onMouseLeave={handleCursorLeave}
+                >
                   <a href={project.projectGitLink} target="_blank" rel="noopener noreferrer">
                     View Repo <RxLink2 className="ml-1 inline" />
                   </a>
