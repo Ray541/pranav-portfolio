@@ -53,8 +53,7 @@ const Footer = () => {
             onMouseEnter={() => handleCursorEnter(2)}
             onMouseLeave={handleCursorLeave}
           >
-            {AUTHOR_NAME}
-            😌
+            {`${AUTHOR_NAME} 😎`}
           </span>
         </p>
 
