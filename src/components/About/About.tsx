@@ -1,5 +1,9 @@
 import React, { ReactElement, ReactNode, useState } from "react";
 import {
+  SiLinkedin,
+  SiGithub,
+  SiFacebook,
+  SiInstagram,
   SiNextdotjs,
   SiRedux,
   SiTypescript,
@@ -21,11 +25,34 @@ import {
 import { IconBaseProps } from "react-icons";
 import { GoCopy } from "react-icons/go";
 import { IoCheckmarkDone } from "react-icons/io5";
-import Socials from "../../components/Socials/Socials";
+import SocialButton from "../SocialButton/SocialButton";
 import { Button } from "@/components/ui/button";
 import Section from "../Section/Section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { handleCursorEnter, handleCursorLeave } from "../../utils/gsapUtils";
+
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/pranav-rao-09a79b231/",
+    icon: <SiLinkedin />,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/Ray541",
+    icon: <SiGithub />,
+    label: "GitHub",
+  },
+  {
+    href: "https://www.facebook.com/pranav.rao.338",
+    icon: <SiFacebook />,
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/pranav_rao0504",
+    icon: <SiInstagram />,
+    label: "Instagram",
+  },
+];
 
 const withColor = (
   icon: ReactElement<IconBaseProps>,
@@ -240,7 +267,16 @@ const About = () => {
               {emailCopied ? <IoCheckmarkDone /> : <GoCopy />}
               {emailCopied ? "Email Copied" : "Copy Email"}
             </Button>
-            <Socials />
+            <div className="flex flex-wrap gap-2">
+              {socialLinks.map((social, index) => (
+                <SocialButton
+                  key={index}
+                  href={social.href}
+                  icon={social.icon}
+                  label={social.label}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

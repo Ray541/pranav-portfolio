@@ -1,5 +1,5 @@
 import Section from "../Section/Section";
-import Socials from "../Socials/Socials";
+import Socials from "../SocialButton/SocialButton";
 import { Button } from "../ui/button";
 import { SiMinutemailer } from "react-icons/si";
 import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";

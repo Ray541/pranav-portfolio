@@ -3,10 +3,34 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Section from "../Section/Section";
 import { MdOutlineFileDownload } from "react-icons/md";
-import Socials from "../Socials/Socials";
+import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+import SocialButton from "../SocialButton/SocialButton";
 import resume from "../../assets/Pranav's_Resume.pdf";
 import { Button } from "@/components/ui/button";
 import { handleCursorEnter, handleCursorLeave } from "../../utils/gsapUtils";
+
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/pranav-rao-09a79b231/",
+    icon: <SiLinkedin />,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/Ray541",
+    icon: <SiGithub />,
+    label: "GitHub",
+  },
+  {
+    href: "https://www.facebook.com/pranav.rao.338",
+    icon: <SiFacebook />,
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/pranav_rao0504",
+    icon: <SiInstagram />,
+    label: "Instagram",
+  },
+];
 
 const Home = () => {
   const headlineRef = useRef(null);
@@ -83,14 +107,28 @@ const Home = () => {
             </Button>
 
             <div
-              className="hidden lg:flex absolute right-5 top-1/2 transform -translate-y-1/2 z-5 flex-col items-center before:content-[''] before:w-px before:h-30 before:bg-border after:content-[''] after:w-px after:h-30 after:bg-border"
+              className="hidden lg:flex lg:gap-2 absolute right-5 top-1/2 transform -translate-y-1/2 z-5 flex-col items-center before:content-[''] before:w-px before:h-30 before:bg-border after:content-[''] after:w-px after:h-30 after:bg-border"
               ref={socialsRef}
             >
-              <Socials direction="col" />
+              {socialLinks.map((social, index) => (
+                <SocialButton
+                  key={index}
+                  href={social.href}
+                  icon={social.icon}
+                  label={social.label}
+                />
+              ))}
             </div>
 
-            <div className="block lg:hidden" ref={socialsSmallDevicesRef}>
-              <Socials direction="row" />
+            <div className="flex gap-2 lg:hidden" ref={socialsSmallDevicesRef}>
+              {socialLinks.map((social, index) => (
+                <SocialButton
+                  key={index}
+                  href={social.href}
+                  icon={social.icon}
+                  label={social.label}
+                />
+              ))}
             </div>
           </div>
         </div>
