@@ -1,8 +1,32 @@
 import Section from "../Section/Section";
-import Socials from "../SocialButton/SocialButton";
+import SocialButton from "../SocialButton/SocialButton";
 import { Button } from "../ui/button";
-import { SiMinutemailer } from "react-icons/si";
+import { SiMinutemailer, SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+
 import { handleCursorEnter, handleCursorLeave } from "@/utils/gsapUtils";
+
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/pranav-rao-09a79b231/",
+    icon: <SiLinkedin />,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/Ray541",
+    icon: <SiGithub />,
+    label: "GitHub",
+  },
+  {
+    href: "https://www.facebook.com/pranav.rao.338",
+    icon: <SiFacebook />,
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/pranav_rao0504",
+    icon: <SiInstagram />,
+    label: "Instagram",
+  },
+];
 
 const Contact = () => {
   return (
@@ -30,7 +54,16 @@ const Contact = () => {
             </a>
           </Button>
 
-          <Socials />
+          <div className="flex flex-wrap gap-2">
+            {socialLinks.map((social, index) => (
+              <SocialButton
+                key={index}
+                href={social.href}
+                icon={social.icon}
+                label={social.label}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </Section>
