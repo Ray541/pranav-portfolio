@@ -95,7 +95,7 @@ const Home = () => {
             <Button
               asChild
               variant="default"
-              className="gap-2 mt-2 opacity-0"
+              className="gap-2 mt-2 opacity-0 active:scale-95"
               ref={buttonRef}
               onMouseEnter={() => handleCursorEnter(2)}
               onMouseLeave={handleCursorLeave}
