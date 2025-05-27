@@ -1,5 +1,7 @@
+import { useState } from "react";
+import Preloader from "@/components/Preloader/Preloader";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 import Header from "@/components/Header/Header";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Main } from "./Main/Main";
 import Home from "@/components/Home/Home";
 import About from "@/components/About/About";
@@ -9,9 +11,8 @@ import Experience from "@/components/Experience/Experience";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
-import Preloader from "@/components/Preloader/Preloader";
-import { useState } from "react";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const Layout = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,6 +23,7 @@ const Layout = () => {
 
   return (
     <>
+      <ProgressBar />
       <CustomCursor />
       <Header />
       <ModeToggle className="fixed bottom-3 right-7 active:scale-90 z-5" />
