@@ -50,7 +50,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Section sectionName="home" className="h-screen lg:h-dvh">
+    <Section sectionName="home" className="min-h-[100svh] lg:min-h-dvh">
       <div className="w-full h-full flex items-center justify-center p-3 md:p-0">
         <div className="flex flex-col items-center justify-center text-center lg:text-start gap-4 sm:gap-2 lg:w-3/4">
           <h1
