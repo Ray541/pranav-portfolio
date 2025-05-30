@@ -8,7 +8,7 @@ const ProgressBar = () => {
   useGSAP(() => {
     const updateProgress = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
       const progress = (scrollTop / docHeight) * 100;
 
       gsap.to(progressRef.current, {
@@ -26,7 +26,7 @@ const ProgressBar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 min-h-[100svh] lg:min-h-dvh h-1 bg-transparent z-5">
+    <div className="fixed top-0 left-0 w-full h-1 bg-transparent z-5">
       <div ref={progressRef} className="h-full bg-foreground origin-left" style={{ width: "0%" }} />
     </div>
   );
