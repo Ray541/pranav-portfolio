@@ -22,7 +22,7 @@ const Layout = () => {
   }
 
   return (
-    <>
+    <div className="bg-grid-line">
       <ProgressBar />
       <CustomCursor />
       <Header />
@@ -37,7 +37,7 @@ const Layout = () => {
       </Main>
       <Footer />
       <ScrollToTop className="fixed bottom-14 right-7 active:scale-90 z-5" />
-    </>
+    </div>
   );
 };
 

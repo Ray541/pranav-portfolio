@@ -152,4 +152,14 @@
       linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
     -webkit-mask-composite: destination-in;
   }
+
+  .bg-grid-line {
+    background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+    background-size: 450px 450px;
+    /* background-size: 450px 300px; */
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
 }
