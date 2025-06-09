@@ -73,9 +73,13 @@ const Projects = () => {
 
       <Accordion type="single" collapsible className="w-full space-y-5">
         {PROJECTS.map((project, index) => (
-          <AccordionItem key={index} value={`item-${index}`} className="overflow-hidden">
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="overflow-hidden bg-background"
+          >
             <AccordionTrigger
-              className="text-2xl font-black rounded-none px-4 py-3 hover:bg-accent active:bg-accent focus:bg-accent"
+              className="text-2xl font-black rounded-none px-4 py-3 hover:text-background active:text-background focus:text-background hover:bg-foreground active:bg-foreground focus:bg-foreground"
               onMouseEnter={() => handleCursorEnter(3.5)}
               onMouseLeave={handleCursorLeave}
             >
@@ -92,15 +96,15 @@ const Projects = () => {
                 </ul>
               )}
 
-              <div className="text-xs inline-block bg-foreground text-background px-3 py-1 rounded-md border border-primary">
+              <div className="text-xs inline-block bg-foreground text-background px-3 py-1 rounded-md border border-primary mt-2">
                 {project.projectTechnologies}
               </div>
 
-              <div className="flex gap-4 mt-2">
+              <div className="flex justify-self-end gap-4 mt-2">
                 <Button
                   asChild
                   variant="default"
-                  className="text-sm"
+                  className="text-sm active:scale-95"
                   onMouseEnter={() => handleCursorEnter(2)}
                   onMouseLeave={handleCursorLeave}
                 >
@@ -112,7 +116,7 @@ const Projects = () => {
                 <Button
                   asChild
                   variant="link"
-                  className="text-sm"
+                  className="text-sm active:scale-95"
                   onMouseEnter={() => handleCursorEnter(3)}
                   onMouseLeave={handleCursorLeave}
                 >
