@@ -128,3 +128,28 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .preloader-bg-grid-line {
+    background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+    background-size: 400px 300px;
+    background-position: center;
+    overflow: hidden;
+
+    /* Mask for fade effect (center focus) */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%),
+      linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+      ),
+      linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-composite: destination-in;
+  }
+}
