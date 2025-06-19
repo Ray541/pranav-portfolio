@@ -22,7 +22,9 @@ const Layout = () => {
   }
 
   return (
-    <div className="bg-grid-line">
+    <div
+    // className="bg-grid-line"
+    >
       <ProgressBar />
       <CustomCursor />
       <Header />
