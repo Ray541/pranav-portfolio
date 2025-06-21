@@ -30,8 +30,8 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <Section sectionName="contact" className="py-20 px-3">
-      <h2 className="text-6xl font-bold text-center mb-10">
+    <Section sectionName="contact" className="py-20 px-3 flex-col">
+      <h2 className="text-6xl md:text-7xl font-bold text-center mb-10">
         Contact <span className="text-muted">Me</span>
       </h2>
 

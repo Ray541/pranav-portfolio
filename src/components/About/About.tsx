@@ -201,8 +201,8 @@ const About = () => {
   };
 
   return (
-    <Section sectionName="about" className="py-20 px-3">
-      <h2 className="text-6xl font-bold text-center mb-10">
+    <Section sectionName="about" className="py-20 px-3 flex-col">
+      <h2 className="text-6xl md:text-7xl font-bold text-center mb-10">
         <span className="text-muted">About</span> Me
       </h2>
 

@@ -66,8 +66,8 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <Section sectionName="project" className="py-20 px-3 h-full">
-      <h2 className="text-6xl font-bold text-center mb-10">
+    <Section sectionName="project" className="py-20 px-3 flex-col">
+      <h2 className="text-6xl md:text-7xl font-bold text-center mb-10">
         My <span className="text-muted">Work</span>
       </h2>
 
@@ -89,7 +89,7 @@ const Projects = () => {
               <p className="text-lg">{project.projectDesc}</p>
 
               {project.highlights?.length > 0 && (
-                <ul className="list-disc list-inside text-md mt-2 space-y-1 text-muted-foreground">
+                <ul className="list-disc list-inside space-y-1 text-base leading-relaxed text-muted-foreground">
                   {project.highlights.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -100,7 +100,7 @@ const Projects = () => {
                 {project.projectTechnologies}
               </div>
 
-              <div className="flex justify-self-end gap-4 mt-2">
+              <div className="flex justify-self-end gap-4 ">
                 <Button
                   asChild
                   variant="default"
