@@ -42,7 +42,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
     <div
       ref={containerRef}
       className={cn(
-        "preloader-bg-grid-line fixed w-full min-h-[100vh] lg:min-h-dvh z-10 flex items-center justify-center bg-background text-foreground transition-opacity duration-700",
+        "preloader-bg-grid-line fixed w-full min-h-screen z-10 flex items-center justify-center bg-background text-foreground transition-opacity duration-700",
         fadeOut && "opacity-0"
       )}
     >

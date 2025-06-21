@@ -79,7 +79,7 @@ const Projects = () => {
             className="overflow-hidden bg-background"
           >
             <AccordionTrigger
-              className="text-2xl font-black rounded-none px-4 py-3 hover:text-background active:text-background focus:text-background hover:bg-foreground active:bg-foreground focus:bg-foreground"
+              className="text-2xl font-black rounded-none px-4 py-3 hover:text-background active:text-background focus:text-background hover:bg-foreground active:bg-foreground focus:bg-foreground hover:px-6 focus:px-6 active:px-6"
               onMouseEnter={() => handleCursorEnter(3.5)}
               onMouseLeave={handleCursorLeave}
             >
