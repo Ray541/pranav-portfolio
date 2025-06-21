@@ -6,9 +6,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const useLenisScroll = () => {
+  const scrollContainer = document.querySelector("main");
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
+      smoothWheel: true,
+      syncTouch: true,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
@@ -21,7 +25,7 @@ export const useLenisScroll = () => {
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(document.body, {
+    ScrollTrigger.scrollerProxy(scrollContainer, {
       scrollTop(value) {
         return value !== undefined ? lenis.scrollTo(value) : lenis.scroll;
       },
@@ -35,11 +39,11 @@ export const useLenisScroll = () => {
       },
     });
 
-    ScrollTrigger.defaults({ scroller: document.body });
+    ScrollTrigger.defaults({ scroller: scrollContainer });
     ScrollTrigger.refresh();
 
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [scrollContainer]);
 };
