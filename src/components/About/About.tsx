@@ -127,7 +127,7 @@ type SkillBadgeProps = {
 };
 const SkillBadge = ({ name, icon }: SkillBadgeProps) => (
   <span
-    className="flex items-center justify-center gap-2 border p-3 rounded-xl bg-accent/30"
+    className="flex items-center justify-center gap-2 border p-3 rounded-xl bg-accent/30 dark:bg-accent/70"
     onMouseEnter={() => handleCursorEnter(5)}
     onMouseLeave={handleCursorLeave}
   >
@@ -149,7 +149,7 @@ const TechCard = ({ domain, technologies }: TechCardProps) => (
       {technologies.map((tech, index) => (
         <div
           key={index}
-          className="flex items-center justify-center gap-2 flex-wrap bg-accent/30 border rounded-lg px-3 py-2 text-sm transition-all duration-150 hover:-translate-y-0.5 focus:-translate-y-0.5 active:-translate-y-0.5"
+          className="flex items-center justify-center gap-2 flex-wrap bg-accent/30 dark:bg-accent border rounded-lg px-3 py-2 text-sm transition-all duration-150 hover:-translate-y-0.5 focus:-translate-y-0.5 active:-translate-y-0.5"
           onMouseEnter={() => handleCursorEnter(2)}
           onMouseLeave={handleCursorLeave}
         >
