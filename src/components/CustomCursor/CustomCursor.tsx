@@ -12,7 +12,7 @@ const CustomCursor = () => {
       gsap.to(cursorRef.current, {
         x: e.clientX - 12 / 2,
         y: e.clientY - 12 / 2,
-        duration: 0.2,
+        duration: 0.3, // Mouse lerp effect
         ease: "power2.out",
       });
     };
