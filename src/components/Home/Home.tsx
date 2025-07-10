@@ -76,7 +76,7 @@ const Home = () => {
             >
               Passionate{" "}
               <span
-                className="font-black text-secondary tracking-wide"
+                className="font-black text-2xl tracking-wider text-foreground dark:text-foreground"
                 onMouseEnter={() => handleCursorEnter(2.5)}
                 onMouseLeave={handleCursorLeave}
               >
@@ -84,7 +84,7 @@ const Home = () => {
               </span>{" "}
               started my career in Web Dev. I specialize in using{" "}
               <span
-                className="font-black text-secondary tracking-wide"
+                className="font-black text-2xl tracking-wider text-foreground dark:text-foreground"
                 onMouseEnter={() => handleCursorEnter(2.5)}
                 onMouseLeave={handleCursorLeave}
               >
