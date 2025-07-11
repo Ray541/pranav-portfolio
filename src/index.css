@@ -175,9 +175,9 @@
     }
   }
 
-  /* @media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  @media (max-width: 768px), (prefers-reduced-motion: reduce) {
     .animate-aurora {
       animation: none !important;
     }
-  } */
+  }
 }
