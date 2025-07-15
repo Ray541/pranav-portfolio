@@ -17,29 +17,29 @@ import { ModeToggle } from "@/components/mode-toggle";
 const Layout = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  if (!isLoaded) {
-    return <Preloader onComplete={() => setIsLoaded(true)} />;
-  }
-
   return (
-    <div
-    // className="bg-grid-line"
-    >
-      <ProgressBar />
-      <CustomCursor />
-      <Header />
-      <ModeToggle className="fixed bottom-3 right-7 active:scale-90 z-5" />
-      <Main>
-        <Home />
-        <About />
-        <Projects />
-        <LittleInfo />
-        <Experience />
-        <Contact />
-      </Main>
-      <Footer />
-      <ScrollToTop className="fixed bottom-14 right-7 active:scale-90 z-5" />
-    </div>
+    <>
+      {!isLoaded ? (
+        <Preloader onComplete={() => setIsLoaded(true)} />
+      ) : (
+        <>
+          <ProgressBar />
+          <CustomCursor />
+          <Header />
+          <ModeToggle className="fixed bottom-3 right-7 active:scale-90 z-5" />
+          <Main>
+            <Home />
+            <About />
+            <Projects />
+            <LittleInfo />
+            <Experience />
+            <Contact />
+          </Main>
+          <Footer />
+          <ScrollToTop className="fixed bottom-14 right-7 active:scale-90 z-5" />
+        </>
+      )}
+    </>
   );
 };
 
