@@ -43,9 +43,9 @@ const Home = () => {
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "expo.inOut", duration: 1 } });
 
-    tl.fromTo(headlineRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
-      .fromTo(paragraphRef.current, { y: 10, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.5")
-      .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1 }, "-=0.5")
+    tl.fromTo(headlineRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 })
+      .fromTo(paragraphRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.3")
+      .fromTo(buttonRef.current, { y: 10, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.4")
       .fromTo(socialsRef.current, { x: 20, opacity: 0 }, { x: 0, opacity: 1 }, "-=0.5")
       .fromTo(socialsSmallDevicesRef.current, { y: 10, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.5");
   }, []);
@@ -102,7 +102,7 @@ const Home = () => {
               onMouseLeave={handleCursorLeave}
             >
               <a href={resume} target="_blank" rel="noopener noreferrer">
-                <MdOutlineFileDownload className="text-xl" />
+                <MdOutlineFileDownload />
                 <span>Download CV</span>
               </a>
             </Button>
